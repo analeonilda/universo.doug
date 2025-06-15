@@ -17,24 +17,21 @@
         :root {
             --azul-primario: #1E3A8A;
             --azul-secundario: #3B82F6;
-            --azul-neon: #3cf4ff;
-            --azul-claro: #DBEAFE;
-            --azul-autismo: #3568e6;
+            --azul-destaque: #2457b7;
+            --azul-leve: #e6f1fd;
+            --azul-card: #2457b7;
             --prata-primaria: #E5E7EB;
             --prata-escura: #6B7280;
             --prata-metalica: #F8FAFC;
             --branco: #FFFFFF;
             --preto: #000000;
-            --amarelo-autismo: #FFD84B;
-            --vermelho-autismo: #FF6363;
-            --verde-autismo: #33C67A;
         }
         * { margin: 0; padding: 0; box-sizing: border-box;}
         body {
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
             color: var(--azul-primario);
-            background: linear-gradient(135deg, var(--prata-metalica) 0%, var(--azul-claro) 100%);
+            background: linear-gradient(135deg, var(--prata-metalica) 0%, var(--azul-leve) 100%);
             overflow-x: hidden;
         }
         html { scroll-behavior: smooth;}
@@ -58,15 +55,15 @@
         }
         .logo {
             font-family: 'Orbitron', monospace;
-            font-size: 2.1rem;
+            font-size: 2.2rem;
             font-weight: 900;
-            color: var(--azul-primario);
-            letter-spacing: 2.5px;
+            color: var(--azul-destaque);
+            letter-spacing: 2.7px;
             text-shadow: none;
             display: flex; align-items: center; gap: 0.7rem;
         }
         .logo img {
-            height: 46px; width: auto; background: transparent; filter: none;
+            height: 44px; width: auto; background: transparent; filter: none;
         }
         .nav-menu {
             display: flex; list-style: none; gap: 1.1rem; align-items: center; flex-wrap: wrap;
@@ -86,76 +83,93 @@
             letter-spacing: 0.8px;
         }
         .nav-link:hover {
-            color: var(--azul-neon);
+            color: var(--azul-destaque);
             background: linear-gradient(90deg, #3B82F6 10%, #1E3A8A 100%);
-            box-shadow: 0 0 10px #00eaffcc, 0 1px 12px #3cf4ff44;
         }
         .cta-button {
-            background: linear-gradient(90deg, #3B82F6 20%, #00eaff 100%);
+            background: linear-gradient(90deg, #3B82F6 20%, #2457b7 100%);
             color: #fff;
             font-size: 1.1rem;
             font-weight: 800;
-            box-shadow: 0 0 16px #00eaff90, 0 2px 10px #1E3A8A30;
-            border: 1.7px solid #3cf4ff;
+            border: 1.7px solid #2457b7;
         }
         .cta-button:hover {
             color: #fff;
-            background: linear-gradient(90deg, #3cf4ff 0%, #1E3A8A 90%);
-            box-shadow: 0 0 32px #00eaffdd, 0 4px 18px #1E3A8A60;
+            background: linear-gradient(90deg, #2457b7 0%, #1E3A8A 90%);
             transform: scale(1.09);
         }
         .spacer { height: 90px; }
 
-        /* HERO */
-        #particles-js {
-            position: absolute;
-            width: 100vw; height: 100vh; z-index: 0; top:0; left:0;
-            pointer-events: none;
-        }
+        /* HERO com VIDEO DE FUNDO */
         .hero {
             position: relative;
             min-height: 94vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: radial-gradient(ellipse at 50% 10%, #193866 45%, #2258a8 100%);
-            color: var(--branco);
             text-align: center;
             overflow: hidden;
         }
+        .hero-bg-video {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+        .hero-bg-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(115deg, rgba(36,87,183,0.80) 0%, rgba(30,58,138,0.85) 100%);
+            z-index: 2;
+        }
         .hero-content {
-            max-width: 1200px; margin: 0 auto; padding: 3.5rem 2rem;
-            position: relative; z-index: 2;
+            max-width: 1200px; margin: 0 auto; padding: 4rem 2rem 3rem 2rem;
+            position: relative; z-index: 3;
         }
         .hero-title {
             font-family: 'Orbitron', monospace;
             font-size: 3.2rem;
             font-weight: 900;
             margin-bottom: 1.05rem;
-            background: linear-gradient(92deg, #fff, #aaf7ff 88%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-shadow: none;
+            color: #fff;
             letter-spacing: 2.7px;
+            text-shadow: 0 4px 20px #223e8380;
         }
         .hero-subtitle {
             font-family: 'Exo 2', sans-serif;
             font-size: 1.5rem;
             font-weight: 400;
             margin-bottom: 2rem;
-            color: #d7f6ff;
-            opacity: 0.9;
+            color: #e4eafd;
+            opacity: 0.97;
+            text-shadow: 0 2px 8px #1E3A8A40;
         }
+        .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2.3rem;}
+        .btn-primary, .btn-secondary {
+            border-radius: 25px; text-decoration: none; font-weight: 700; font-size: 1.13rem; transition: all 0.3s ease; padding: 1rem 2.1rem;
+        }
+        .btn-primary {
+            background: linear-gradient(92deg, #fff, #e3f8ff 88%);
+            color: var(--azul-destaque);
+            box-shadow: 0 4px 18px #2457b760;
+            border: 2px solid #2457b7cc;
+        }
+        .btn-primary:hover { box-shadow: 0 0 30px #2457b7aa; background: #e3eefd; color: #0a3a61;}
+        .btn-secondary {
+            background: transparent;
+            color: #fff;
+            border: 2.3px solid #fff;
+        }
+        .btn-secondary:hover { background: #fff; color: #1941a0; border-color:#2457b7;}
         .scrolldown {
             display: block; margin: 0 auto; margin-top: 2.2rem;
-            width: 22px; height: 36px; border: 2.4px solid #3cf4ff;
+            width: 22px; height: 36px; border: 2.4px solid #fff;
             border-radius: 15px; position: relative; opacity: 0.85;
             animation: bounce-mouse 1.8s infinite;
         }
         .scrolldown-dot {
             position: absolute; left: 50%; transform: translateX(-50%);
-            top: 7px; width: 5px; height: 7px; background: #3cf4ff;
+            top: 7px; width: 5px; height: 7px; background: #fff;
             border-radius: 50%; animation: bounce-dot 1.8s infinite;
         }
         @keyframes bounce-mouse {
@@ -168,37 +182,6 @@
             60% { opacity:0.2; top:20px;}
             100% { opacity:1; top:7px;}
         }
-        .hero-video {
-            width: 100%;
-            max-width: 570px;
-            height: 310px;
-            border-radius: 20px;
-            margin: 2.2rem auto 0.2rem auto;
-            background: rgba(255,255,255,0.12);
-            backdrop-filter: blur(16px);
-            border: 2px solid #0ff4;
-            display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;
-            box-shadow: 0 0 38px #00f9ff14, 0 4px 16px #1E3A8A11;
-        }
-        .video-placeholder { text-align: center; color: #dbf7fa;}
-        .video-placeholder i { font-size: 4.2rem; margin-bottom: 0.9rem; opacity: 0.7;}
-        .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2.3rem;}
-        .btn-primary, .btn-secondary {
-            border-radius: 25px; text-decoration: none; font-weight: 700; font-size: 1.13rem; transition: all 0.3s ease; padding: 1rem 2.1rem;
-        }
-        .btn-primary {
-            background: linear-gradient(92deg, #fff, #e3f8ff 88%);
-            color: var(--azul-primario);
-            box-shadow: 0 4px 18px #3cf4ff30;
-            border: 2px solid #3cf4ff99;
-        }
-        .btn-primary:hover { box-shadow: 0 0 30px #3cf4ffaa; background: #aef9ff; color: #0a3a61;}
-        .btn-secondary {
-            background: transparent;
-            color: var(--branco);
-            border: 2.3px solid #fff;
-        }
-        .btn-secondary:hover { background: #fff; color: #1941a0; border-color:#00eaff;}
         /* Seções */
         .section {
             padding: 2rem 2rem;
@@ -206,7 +189,6 @@
             margin: 0 auto 2.2rem auto;
             position: relative;
         }
-        /* Instituto Somar */
         .section-title.somar-title {
             color: var(--azul-primario);
             background: none;
@@ -226,14 +208,14 @@
         }
         .section-title.workshops-title,
         .section-title.atipicas-title {
-            color: var(--azul-primario);
+            color: var(--azul-destaque);
             background: none;
             -webkit-text-fill-color: unset;
             text-shadow: none;
         }
         .section-subtitle,
         .workshop-title {
-            color: var(--azul-autismo) !important;
+            color: var(--azul-destaque) !important;
             background: none;
             -webkit-text-fill-color: unset;
         }
@@ -257,9 +239,9 @@
             background: rgba(255,255,255,0.13);
             border-radius: 18px;
             padding: 1.35rem;
-            box-shadow: 0 8px 32px #3cf4ff12, 0 0 0 1.5px #3cf4ff24;
+            box-shadow: 0 8px 32px #2457b715, 0 0 0 1.5px #2457b714;
             transition: all 0.23s;
-            border: 1.5px solid #3cf4ff44;
+            border: 1.5px solid #2457b728;
             position: relative; overflow: hidden;
             backdrop-filter: blur(8px);
         }
@@ -268,11 +250,11 @@
             position: absolute;
             top: 0; left: 0; right: 0;
             height: 4px;
-            background: linear-gradient(92deg, #3cf4ff 30%, #1e3a8a 90%);
+            background: linear-gradient(92deg, #2457b7 30%, #1e3a8a 90%);
         }
         .card-icon {
             font-size: 2.5rem;
-            color: #3cf4ff;
+            color: #2457b7;
             margin-bottom: 0.7rem;
         }
         /* Doug Section */
@@ -281,7 +263,7 @@
             border-radius: 26px;
             margin: 1.7rem 0;
             overflow: hidden;
-            box-shadow: 0 0 32px #3cf4ff0a;
+            box-shadow: 0 0 32px #2457b70a;
             border: 1.2px solid #b5eaff;
         }
         .doug-content {
@@ -296,25 +278,25 @@
             width: 100%; max-width: 350px; border-radius: 22px;
             margin: 0 auto;
             background: transparent;
-            box-shadow: 0 0 40px #3cf4ff44, 0 8px 30px #19386622;
+            box-shadow: 0 0 40px #2457b744, 0 8px 30px #19386622;
             transition: 0.32s cubic-bezier(.68,-0.55,.27,1.55);
-            filter: drop-shadow(0 0 8px #1e8aff33);
+            filter: drop-shadow(0 0 8px #2457b733);
         }
         .doug-image img:hover {
             transform: scale(1.07) rotate(-2deg);
-            box-shadow: 0 0 88px #3cf4ffa3, 0 14px 40px #1E3A8A20;
-            filter: brightness(1.08) drop-shadow(0 0 24px #3cf4ff66);
+            box-shadow: 0 0 88px #2457b7a3, 0 14px 40px #1E3A8A20;
+            filter: brightness(1.08) drop-shadow(0 0 24px #2457b766);
         }
         .doug-features { display: grid; gap: 1.07rem;}
         .feature {
             display: flex; align-items: center; gap: 1rem; padding: 0.77rem;
             background: rgba(255,255,255,0.93);
             border-radius: 13px;
-            box-shadow: 0 3px 10px #3cf4ff09;
+            box-shadow: 0 3px 10px #2457b709;
             border: 1.3px solid #c7eaff;
         }
-        .feature-icon { font-size: 1.7rem; color: #3cf4ff; min-width: 42px; text-align: center;}
-        .feature-text { font-weight: 600; color: var(--azul-primario);}
+        .feature-icon { font-size: 1.7rem; color: #2457b7; min-width: 42px; text-align: center;}
+        .feature-text { font-weight: 600; color: var(--azul-destaque);}
         /* Workshops */
         .workshops-carousel {
             margin: 1.2rem auto 0 auto;
@@ -326,11 +308,11 @@
             height: 100%;
         }
         .workshop-card {
-            background: rgba(255,255,255,0.92);
+            background: #f6fafd;
             border-radius: 12px;
             padding: 1.1rem 1.3rem;
-            box-shadow: 0 5px 15px #3cf4ff08;
-            border-left: 5px solid #3cf4ff;
+            box-shadow: 0 5px 15px #2457b708;
+            border-left: 5px solid #2457b7;
             border-right: 1.5px solid #19386613;
             min-width: 260px;
             max-width: 310px;
@@ -343,40 +325,69 @@
         .workshop-title {
             font-family: 'Exo 2', sans-serif;
             font-weight: 700;
-            color: var(--azul-autismo) !important;
+            color: var(--azul-card) !important;
             margin-bottom: 0.37rem;
             font-size: 1.11rem;
         }
         .workshop-description { color: var(--prata-escura); font-size: 0.95rem;}
-        /* Crianças Atípicas */
+        /* CRIANÇAS ATÍPICAS */
         .atipicas-section {
-            background: #fff;
+            background: #e6f1fd;
             border-radius: 28px;
-            box-shadow: 0 0 34px #3cf4ff0a;
-            border: 1.2px solid #e6f6ff;
+            box-shadow: 0 0 34px #2457b70a;
+            border: 1.2px solid #cfe6ff;
             padding: 2.3rem 1rem 1.5rem 1rem;
+            margin-bottom: 2.2rem;
         }
-        .atipicas-icons {
-            display: flex; gap: 14px; justify-content: center; margin-bottom: 1.1rem; font-size: 2.3rem;
+        .atipicas-title-row {
+            display: flex; align-items: center; justify-content: center; gap: 1.5rem; margin-bottom: 0.7rem;
         }
-        .puzzle-autismo { color: var(--azul-autismo);}
-        .heart-autismo { color: var(--vermelho-autismo);}
-        .smile-autismo { color: var(--amarelo-autismo);}
-        .balloon-autismo { color: var(--verde-autismo);}
         .atipicas-title {
-            color: var(--azul-primario);
-            background: none;
-            -webkit-text-fill-color: unset;
+            color: var(--azul-destaque);
+            font-family: 'Orbitron', monospace;
+            font-size: 2.0rem;
+            font-weight: 800;
+            letter-spacing: 2px;
             text-shadow: none;
+            margin: 0;
         }
-        /* Contato */
+        .autismo-fita {
+            width: 64px; height: 64px; display: block;
+        }
+        .atipicas-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.2rem;
+        }
+        .atipicas-card {
+            background: #fff;
+            border-radius: 17px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 18px #2457b713;
+            border: 1.5px solid #2457b722;
+            color: #2457b7;
+            text-align: center;
+        }
+        .atipicas-card .card-title {
+            color: #2457b7;
+            font-size: 1.18rem;
+            font-family: 'Exo 2', sans-serif;
+            font-weight: 700;
+            margin-bottom: 0.6rem;
+        }
+        .atipicas-card .card-text {
+            color: #3863b0;
+            font-size: 1.03rem;
+        }
+        /* Contato, Footer, etc... (Sem alteração) */
         .contact-section {
-            background: linear-gradient(135deg, #1e3a8a 80%, #3cf4ff 100%);
+            background: linear-gradient(135deg, #1e3a8a 80%, #2457b7 100%);
             color: var(--branco);
             border-radius: 28px;
             text-align: center;
             margin: 1.7rem 0;
-            box-shadow: 0 0 42px #3cf4ff0a;
+            box-shadow: 0 0 42px #2457b70a;
         }
         .contact-content {
             display: grid; grid-template-columns: 1fr 1fr; gap: 2.1rem; align-items: center;
@@ -390,8 +401,8 @@
         }
         .contact-icon { font-size: 1.3rem; min-width: 38px; text-align: center;}
         .whatsapp-button {
-            background: #3cf4ff;
-            color: #0e2d56;
+            background: #2457b7;
+            color: #fff;
             padding: 0.8rem 1.7rem;
             border-radius: 25px;
             text-decoration: none;
@@ -402,9 +413,9 @@
             margin-top: 1rem;
             transition: all 0.16s;
             font-size: 1.07rem;
-            box-shadow: 0 0 14px #3cf4ff60;
+            box-shadow: 0 0 14px #2457b760;
         }
-        .whatsapp-button:hover { background: #1e3a8a; color: #fff; box-shadow: 0 0 30px #3cf4ffaa;}
+        .whatsapp-button:hover { background: #1e3a8a; color: #fff; box-shadow: 0 0 30px #2457b7aa;}
         /* Mini Doug */
         .mini-doug {
             width: 60px; height: auto;
@@ -418,7 +429,7 @@
             text-align: center;
             padding: 1.3rem;
             letter-spacing: 1px;
-            border-top: 2px solid #3cf4ff44;
+            border-top: 2px solid #2457b744;
         }
         .footer-content { max-width: 1200px; margin: 0 auto;}
         @media (max-width: 900px) {
@@ -437,6 +448,7 @@
         @media (max-width: 600px) {
             .header { font-size: 1rem;}
             .section, .hero-content { padding: 0.7rem;}
+            .atipicas-title-row { flex-direction: column; gap: 0.5rem;}
         }
         @keyframes fadeInUp {
             from {opacity: 0; transform: translateY(30px);}
@@ -451,7 +463,7 @@
         <nav class="nav-container">
             <a href="#" class="logo">
                 <img src="doug_logo.png" alt="Logo Doug" />
-                Universo Doug
+                <span style="color: #2457b7;">Universo Doug</span>
             </a>
             <ul class="nav-menu">
                 <li><a href="#sobre" class="nav-link">Sobre</a></li>
@@ -465,17 +477,12 @@
     <div class="spacer"></div>
     <!-- Hero Section -->
     <section class="hero">
-        <div id="particles-js"></div>
+        <!-- VIDEO DE FUNDO -->
+        <video class="hero-bg-video" src="video-fundo.mp4" autoplay loop muted playsinline></video>
+        <div class="hero-bg-overlay"></div>
         <div class="hero-content">
             <h1 class="hero-title">O Futuro da Educação Chegou ao Brasil</h1>
             <p class="hero-subtitle">Conheça Doug, o primeiro humanoide educador do país, revolucionando o aprendizado com tecnologia de ponta</p>
-            <div class="hero-video">
-                <div class="video-placeholder">
-                    <i class="fas fa-play-circle"></i>
-                    <p>Vídeo de Doug em Ação</p>
-                    <small>Em breve: Doug se movimentando e interagindo</small>
-                </div>
-            </div>
             <div class="hero-buttons">
                 <a href="#contato" class="btn-primary">
                     <i class="fas fa-calendar-alt"></i>
@@ -519,37 +526,37 @@
             <div class="doug-content">
                 <div class="doug-image">
                     <img src="doug_photo.png" alt="Doug - O Humanoide Educador" />
-                    <p style="text-align: center; margin-top: 1rem; color: var(--azul-primario);">
+                    <p style="text-align: center; margin-top: 1rem; color: var(--azul-destaque);">
                         Doug - O Humanoide Educador<br>
                         <small>Foto real do Doug</small>
                     </p>
                 </div>
                 <div>
-                    <h2 class="section-title" style="color: #1E3A8A; background:none; text-align: left; margin-bottom: 1.2rem; -webkit-text-fill-color: unset; text-shadow:none;">
+                    <h2 class="section-title" style="color: #2457b7; background:none; text-align: left; margin-bottom: 1.2rem; -webkit-text-fill-color: unset; text-shadow:none;">
                         Doug: Mais que um Robô, um Companheiro de Aprendizagem
                     </h2>
-                    <p style="font-size: 1.08rem; color: #1E3A8A; margin-bottom: 1.2rem;">
+                    <p style="font-size: 1.08rem; color: #2457b7; margin-bottom: 1.2rem;">
                         Doug é o primeiro humanoide educador desenvolvido no Brasil, projetado para interagir de forma lúdica e eficaz com crianças e jovens. Sua presença em sala de aula cria um ambiente de aprendizado inovador, despertando a curiosidade e o engajamento dos alunos.
                     </p>
                     <div class="doug-features">
                         <div class="feature"><i class="fas fa-brain feature-icon"></i>
                             <div><strong class="feature-text">Inteligência Artificial Avançada</strong>
-                                <p style="color: #3B82F6; margin: 0;">Adaptação personalizada ao ritmo de cada aluno</p>
+                                <p style="color: #2457b7; margin: 0;">Adaptação personalizada ao ritmo de cada aluno</p>
                             </div>
                         </div>
                         <div class="feature"><i class="fas fa-comments feature-icon"></i>
                             <div><strong class="feature-text">Interação Natural</strong>
-                                <p style="color: #3B82F6; margin: 0;">Comunicação fluida e envolvente</p>
+                                <p style="color: #2457b7; margin: 0;">Comunicação fluida e envolvente</p>
                             </div>
                         </div>
                         <div class="feature"><i class="fas fa-gamepad feature-icon"></i>
                             <div><strong class="feature-text">Aprendizado Lúdico</strong>
-                                <p style="color: #3B82F6; margin: 0;">Jogos e atividades interativas</p>
+                                <p style="color: #2457b7; margin: 0;">Jogos e atividades interativas</p>
                             </div>
                         </div>
                         <div class="feature"><i class="fas fa-chart-line feature-icon"></i>
                             <div><strong class="feature-text">Acompanhamento de Progresso</strong>
-                                <p style="color: #3B82F6; margin: 0;">Relatórios detalhados de desenvolvimento</p>
+                                <p style="color: #2457b7; margin: 0;">Relatórios detalhados de desenvolvimento</p>
                             </div>
                         </div>
                     </div>
@@ -588,31 +595,25 @@
     </section>
     <!-- Crianças Atípicas -->
     <section class="section fade-in-up atipicas-section">
-        <div class="atipicas-icons">
-            <i class="fas fa-puzzle-piece puzzle-autismo"></i>
-            <i class="fas fa-heart heart-autismo"></i>
-            <i class="fas fa-smile smile-autismo"></i>
-            <i class="fas fa-balloon balloon-autismo"></i>
+        <div class="atipicas-title-row">
+            <img src="fita-autismo.png" alt="Fita do Autismo" class="autismo-fita">
+            <h2 class="atipicas-title">Projeto Especial: Crianças Atípicas</h2>
         </div>
-        <h2 class="section-title atipicas-title">Projeto Especial: Crianças Atípicas</h2>
-        <p class="section-subtitle" style="color: #3568e6;">
+        <p class="section-subtitle" style="color: #2457b7;">
             Doug foi especialmente programado para trabalhar com crianças autistas e atípicas, oferecendo uma abordagem personalizada e sensível às suas necessidades específicas.
         </p>
-        <div class="cards-grid" style="margin-top: 1rem;">
-            <div class="card">
-                <i class="fas fa-puzzle-piece puzzle-autismo card-icon"></i>
-                <h3 class="card-title" style="color: #3568e6;">Adaptação Sensorial</h3>
-                <p class="card-text">Ajustes de som, luz e movimento para criar um ambiente confortável e acolhedor.</p>
+        <div class="atipicas-cards">
+            <div class="atipicas-card">
+                <div class="card-title">Adaptação Sensorial</div>
+                <div class="card-text">Ajustes de som, luz e movimento para criar um ambiente confortável e acolhedor.</div>
             </div>
-            <div class="card">
-                <i class="fas fa-clock heart-autismo card-icon"></i>
-                <h3 class="card-title" style="color: #FF6363;">Ritmo Personalizado</h3>
-                <p class="card-text">Atividades adaptadas ao tempo e necessidades individuais de cada criança.</p>
+            <div class="atipicas-card">
+                <div class="card-title">Ritmo Personalizado</div>
+                <div class="card-text">Atividades adaptadas ao tempo e necessidades individuais de cada criança.</div>
             </div>
-            <div class="card">
-                <i class="fas fa-hands-helping smile-autismo card-icon"></i>
-                <h3 class="card-title" style="color: #FFD84B;">Comunicação Alternativa</h3>
-                <p class="card-text">Múltiplas formas de comunicação, incluindo gestos, símbolos e tecnologia assistiva.</p>
+            <div class="atipicas-card">
+                <div class="card-title">Comunicação Alternativa</div>
+                <div class="card-text">Múltiplas formas de comunicação, incluindo gestos, símbolos e tecnologia assistiva.</div>
             </div>
         </div>
     </section>
@@ -677,23 +678,6 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
-        // Particles.js config
-        particlesJS("particles-js", {
-            "particles": {
-                "number": { "value": 68, "density": { "enable": true, "value_area": 950 }},
-                "color": { "value": "#3cf4ff" },
-                "shape": { "type": "circle" },
-                "opacity": { "value": 0.36, "random": true },
-                "size": { "value": 4, "random": true },
-                "line_linked": { "enable": true, "distance": 120, "color": "#1E3A8A", "opacity": 0.22, "width": 1.4 },
-                "move": { "enable": true, "speed": 2.2, "direction": "none", "random": false, "straight": false, "out_mode": "out" }
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": false }, "resize": true }
-            },
-            "retina_detect": true
-        });
         // Workshops Slider
         $(document).ready(function(){
             $('.workshops-carousel').slick({
@@ -722,10 +706,10 @@
             const header = document.querySelector('.header');
             if (window.scrollY > 100) {
                 header.style.background = 'rgba(10,24,52,0.95)';
-                header.style.boxShadow = '0 2px 20px #3cf4ff44';
+                header.style.boxShadow = '0 2px 20px #2457b744';
             } else {
                 header.style.background = 'rgba(10,24,52,0.88)';
-                header.style.boxShadow = '0 2px 20px #0ff5 0.5';
+                header.style.boxShadow = '0 2px 20px #2457b744 0.5';
             }
         });
     </script>
