@@ -3,11 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Universo Doug - O Futuro da Educação Chegou ao Brasil</title>
-    <meta name="description" content="Conheça Doug, o primeiro humanoide educador do Brasil. Transforme o aprendizado de crianças e jovens com workshops inovadores do Instituto Somar.">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Universo Doug - O Primeiro Humanoide Educador do Brasil</title>
+    <meta name="description" content="Conheça Doug, o primeiro humanoide educador do Brasil. Instituto Somar apresenta tecnologia revolucionária para transformar a educação com 20 workshops inovadores.">
+    
+    <!-- Fontes Tecnológicas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
+        :root {
+            --azul-primario: #1E3A8A;
+            --azul-secundario: #3B82F6;
+            --azul-claro: #DBEAFE;
+            --prata-primaria: #E5E7EB;
+            --prata-escura: #6B7280;
+            --prata-metalica: #F8FAFC;
+            --branco: #FFFFFF;
+            --preto: #000000;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -17,89 +35,97 @@
         body {
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: var(--azul-primario);
+            background: linear-gradient(135deg, var(--prata-metalica) 0%, var(--azul-claro) 100%);
             overflow-x: hidden;
         }
 
-        .container {
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(248, 250, 252, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--prata-primaria);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-            color: white;
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        }
-
-        nav {
+            padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--azul-primario);
+            text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-size: 1.5rem;
-            font-weight: 700;
+            gap: 0.5rem;
         }
 
-        .logo img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
+        .logo i {
+            color: var(--azul-secundario);
+            font-size: 2rem;
         }
 
-        .nav-links {
+        .nav-menu {
             display: flex;
             list-style: none;
             gap: 2rem;
+            align-items: center;
         }
 
-        .nav-links a {
-            color: white;
-            text-decoration: none;
+        .nav-link {
+            font-family: 'Exo 2', sans-serif;
             font-weight: 500;
+            color: var(--azul-primario);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
             transition: all 0.3s ease;
+            position: relative;
         }
 
-        .nav-links a:hover {
-            color: #60a5fa;
+        .nav-link:hover {
+            background: linear-gradient(135deg, var(--azul-secundario), var(--azul-primario));
+            color: var(--branco);
             transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
         }
 
         .cta-button {
-            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 50px;
-            font-weight: 600;
+            background: linear-gradient(135deg, var(--azul-secundario), var(--azul-primario));
+            color: var(--branco);
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
             text-decoration: none;
+            font-weight: 600;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
         }
 
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%);
-            color: white;
-            padding: 120px 0 80px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--azul-primario) 0%, var(--azul-secundario) 100%);
+            color: var(--branco);
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -112,392 +138,406 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="%23ffffff" stop-opacity="0.1"/><stop offset="100%" stop-color="%23ffffff" stop-opacity="0"/></radialGradient></defs><circle cx="200" cy="200" r="100" fill="url(%23a)"/><circle cx="800" cy="300" r="150" fill="url(%23a)"/><circle cx="400" cy="700" r="120" fill="url(%23a)"/></svg>');
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
             opacity: 0.3;
         }
 
         .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
             position: relative;
             z-index: 2;
         }
 
-        .hero h1 {
+        .hero-title {
+            font-family: 'Orbitron', monospace;
             font-size: 3.5rem;
-            font-weight: 800;
+            font-weight: 900;
             margin-bottom: 1rem;
-            background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 100%);
+            background: linear-gradient(135deg, var(--branco), var(--prata-primaria));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            line-height: 1.2;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
-        .hero p {
-            font-size: 1.3rem;
+        .hero-subtitle {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 300;
             margin-bottom: 2rem;
             opacity: 0.9;
+        }
+
+        .hero-video {
+            width: 100%;
+            max-width: 600px;
+            height: 400px;
+            border-radius: 20px;
+            margin: 2rem auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-placeholder {
+            text-align: center;
+            color: var(--branco);
+        }
+
+        .video-placeholder i {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            opacity: 0.7;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--branco), var(--prata-primaria));
+            color: var(--azul-primario);
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--branco);
+            padding: 1rem 2rem;
+            border: 2px solid var(--branco);
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: var(--branco);
+            color: var(--azul-primario);
+            transform: translateY(-3px);
+        }
+
+        /* Seções */
+        .section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, var(--azul-primario), var(--azul-secundario));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1.2rem;
+            text-align: center;
+            color: var(--prata-escura);
+            margin-bottom: 3rem;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
         }
 
-        .hero-video {
-            margin: 3rem 0;
-            position: relative;
+        /* Cards */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
         }
 
-        .video-placeholder {
-            background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
+        .card {
+            background: var(--branco);
             border-radius: 20px;
-            padding: 60px;
-            margin: 2rem auto;
-            max-width: 600px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-            border: 3px solid rgba(255,255,255,0.1);
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(30, 58, 138, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid var(--prata-primaria);
+            position: relative;
+            overflow: hidden;
         }
 
-        .video-placeholder i {
-            font-size: 4rem;
-            color: #60a5fa;
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, var(--azul-secundario), var(--azul-primario));
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(30, 58, 138, 0.15);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            color: var(--azul-secundario);
             margin-bottom: 1rem;
         }
 
-        .video-placeholder p {
-            font-size: 1.1rem;
-            opacity: 0.8;
+        .card-title {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--azul-primario);
         }
 
-        /* About Section */
-        .about {
-            padding: 80px 0;
-            background: #f8fafc;
+        .card-text {
+            color: var(--prata-escura);
+            line-height: 1.6;
         }
 
-        .about-grid {
+        /* Doug Section */
+        .doug-section {
+            background: linear-gradient(135deg, var(--prata-metalica), var(--azul-claro));
+            border-radius: 30px;
+            margin: 3rem 0;
+            overflow: hidden;
+        }
+
+        .doug-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 3rem;
             align-items: center;
-        }
-
-        .about-content h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #1e3a8a;
-            margin-bottom: 1.5rem;
-        }
-
-        .about-content p {
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-            color: #64748b;
-        }
-
-        .values {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .value-item {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
-
-        .value-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
-
-        .value-item i {
-            font-size: 2rem;
-            color: #3b82f6;
-            margin-bottom: 1rem;
-        }
-
-        .value-item h4 {
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: #1e3a8a;
+            padding: 3rem;
         }
 
         .doug-image {
             text-align: center;
         }
 
-        .doug-image img {
-            max-width: 100%;
-            height: auto;
+        .doug-placeholder {
+            width: 100%;
+            max-width: 400px;
+            height: 500px;
+            background: linear-gradient(135deg, var(--azul-secundario), var(--azul-primario));
             border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-
-        /* Doug Section */
-        .doug-section {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-            color: white;
-        }
-
-        .doug-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            display: flex;
             align-items: center;
-        }
-
-        .doug-content h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
+            justify-content: center;
+            color: var(--branco);
+            font-size: 4rem;
+            margin: 0 auto;
+            box-shadow: 0 20px 40px rgba(30, 58, 138, 0.3);
         }
 
         .doug-features {
             display: grid;
             gap: 1.5rem;
-            margin-top: 2rem;
         }
 
-        .feature-item {
+        .feature {
             display: flex;
             align-items: center;
             gap: 1rem;
-            background: rgba(255,255,255,0.1);
             padding: 1rem;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
+            background: var(--branco);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(30, 58, 138, 0.1);
         }
 
-        .feature-item i {
-            font-size: 1.5rem;
-            color: #60a5fa;
-        }
-
-        /* Workshops Section */
-        .workshops {
-            padding: 80px 0;
-            background: #f8fafc;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-header h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #1e3a8a;
-            margin-bottom: 1rem;
-        }
-
-        .section-header p {
-            font-size: 1.2rem;
-            color: #64748b;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .methodology {
-            background: white;
-            padding: 3rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            margin-bottom: 4rem;
-        }
-
-        .methodology h3 {
-            font-size: 1.8rem;
-            font-weight: 600;
-            color: #1e3a8a;
-            margin-bottom: 1.5rem;
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--azul-secundario);
+            min-width: 60px;
             text-align: center;
         }
 
-        .methodology-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+        .feature-text {
+            font-weight: 500;
+            color: var(--azul-primario);
         }
 
-        .methodology-item {
-            text-align: center;
-            padding: 1.5rem;
-        }
-
-        .methodology-item i {
-            font-size: 2.5rem;
-            color: #3b82f6;
-            margin-bottom: 1rem;
-        }
-
-        .methodology-item h4 {
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: #1e3a8a;
-        }
-
+        /* Workshops Grid */
         .workshops-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
         }
 
         .workshop-card {
-            background: white;
-            border-radius: 20px;
-            padding: 2rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            background: var(--branco);
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(30, 58, 138, 0.1);
             transition: all 0.3s ease;
-            border: 2px solid transparent;
+            border-left: 4px solid var(--azul-secundario);
         }
 
         .workshop-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-            border-color: #3b82f6;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(30, 58, 138, 0.15);
         }
 
-        .workshop-card h3 {
-            font-size: 1.3rem;
+        .workshop-title {
+            font-family: 'Exo 2', sans-serif;
             font-weight: 600;
-            color: #1e3a8a;
-            margin-bottom: 1rem;
+            color: var(--azul-primario);
+            margin-bottom: 0.5rem;
         }
 
-        .workshop-contexts {
-            list-style: none;
+        .workshop-description {
+            color: var(--prata-escura);
+            font-size: 0.9rem;
+            line-height: 1.5;
         }
 
-        .workshop-contexts li {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid #e2e8f0;
-            color: #64748b;
-            position: relative;
-            padding-left: 1.5rem;
-        }
-
-        .workshop-contexts li:before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #10b981;
-            font-weight: bold;
-        }
-
-        .workshop-contexts li:last-child {
-            border-bottom: none;
-        }
-
-        /* Autism Project Section */
-        .autism-project {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-            color: white;
-        }
-
-        .autism-content {
+        /* Contato Section */
+        .contact-section {
+            background: linear-gradient(135deg, var(--azul-primario), var(--azul-secundario));
+            color: var(--branco);
+            border-radius: 30px;
             text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
+            margin: 3rem 0;
         }
 
-        .autism-content h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
         }
 
-        .autism-content p {
-            font-size: 1.2rem;
-            opacity: 0.9;
+        .contact-info {
+            text-align: left;
         }
 
-        /* CTA Section */
-        .final-cta {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-            color: white;
-            text-align: center;
-        }
-
-        .final-cta h2 {
+        .contact-title {
+            font-family: 'Orbitron', monospace;
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 1rem;
         }
 
-        .final-cta p {
+        .contact-subtitle {
             font-size: 1.2rem;
             margin-bottom: 2rem;
             opacity: 0.9;
         }
 
-        .contact-info {
-            background: rgba(255,255,255,0.1);
-            padding: 2rem;
-            border-radius: 15px;
-            display: inline-block;
-            margin-top: 2rem;
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
             backdrop-filter: blur(10px);
         }
 
-        .contact-info h3 {
-            margin-bottom: 1rem;
-        }
-
-        .phone-number {
+        .contact-icon {
             font-size: 1.5rem;
-            font-weight: 600;
-            color: #fef3c7;
-        }
-
-        /* Footer */
-        footer {
-            background: #1f2937;
-            color: white;
-            padding: 2rem 0;
+            min-width: 40px;
             text-align: center;
         }
 
-        /* Responsive Design */
+        .whatsapp-button {
+            background: #25D366;
+            color: var(--branco);
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-button:hover {
+            background: #128C7E;
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--azul-primario);
+            color: var(--branco);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Responsividade */
         @media (max-width: 768px) {
-            .nav-links {
+            .nav-menu {
                 display: none;
             }
 
-            .hero h1 {
+            .hero-title {
                 font-size: 2.5rem;
             }
 
-            .hero p {
-                font-size: 1.1rem;
+            .hero-subtitle {
+                font-size: 1.2rem;
             }
 
-            .about-grid,
-            .doug-grid {
+            .doug-content {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                text-align: center;
             }
 
-            .values {
-                grid-template-columns: 1fr;
-            }
-
-            .methodology-grid {
+            .contact-content {
                 grid-template-columns: 1fr;
             }
 
-            .workshops-grid {
-                grid-template-columns: 1fr;
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                max-width: 300px;
             }
         }
 
-        /* Animations */
+        /* Animações */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -510,159 +550,142 @@
         }
 
         .fade-in-up {
-            animation: fadeInUp 0.8s ease-out;
+            animation: fadeInUp 0.6s ease-out;
         }
 
-        /* Smooth scrolling */
+        /* Scroll suave */
         html {
             scroll-behavior: smooth;
-        }
-
-        /* Loading animation for video placeholder */
-        @keyframes pulse {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.5;
-            }
-        }
-
-        .video-placeholder i {
-            animation: pulse 2s infinite;
         }
     </style>
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <nav class="container">
-            <div class="logo">
-                <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                    <i class="fas fa-robot" style="color: white; font-size: 1.2rem;"></i>
-                </div>
-                <span>Universo Doug</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#doug">Doug</a></li>
-                <li><a href="#workshops">Workshops</a></li>
-                <li><a href="#contact">Contato</a></li>
-            </ul>
-            <a href="#contact" class="cta-button">
-                <i class="fas fa-phone"></i> Entre em Contato
+    <header class="header">
+        <nav class="nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-robot"></i>
+                Universo Doug
             </a>
+            <ul class="nav-menu">
+                <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                <li><a href="#doug" class="nav-link">Doug</a></li>
+                <li><a href="#workshops" class="nav-link">Workshops</a></li>
+                <li><a href="#contato" class="nav-link">Contato</a></li>
+                <li><a href="#contato" class="cta-button">Entre em Contato</a></li>
+            </ul>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <div class="hero-content fade-in-up">
-                <h1>O Futuro da Educação Chegou ao Brasil!</h1>
-                <p>Conheça Doug, o Primeiro Humanoide Educador do País, e Transforme o Aprendizado de Crianças e Jovens com Tecnologia de Ponta e Metodologia Inovadora.</p>
-                
-                <div class="hero-video">
-                    <div class="video-placeholder">
-                        <i class="fas fa-play-circle"></i>
-                        <p>Vídeo de Doug em Ação<br><small>Em breve: Doug se movimentando e interagindo</small></p>
-                    </div>
+        <div class="hero-content">
+            <h1 class="hero-title">O Futuro da Educação Chegou ao Brasil</h1>
+            <p class="hero-subtitle">Conheça Doug, o primeiro humanoide educador do país, revolucionando o aprendizado com tecnologia de ponta</p>
+            
+            <div class="hero-video">
+                <div class="video-placeholder">
+                    <i class="fas fa-play-circle"></i>
+                    <p>Vídeo de Doug em Ação</p>
+                    <small>Em breve: Doug se movimentando e interagindo</small>
                 </div>
+            </div>
 
-                <a href="#contact" class="cta-button" style="font-size: 1.2rem; padding: 15px 30px;">
-                    <i class="fas fa-calendar-alt"></i> Agende uma Demonstração Gratuita!
+            <div class="hero-buttons">
+                <a href="#contato" class="btn-primary">
+                    <i class="fas fa-calendar-alt"></i>
+                    Agende uma Demonstração Gratuita!
+                </a>
+                <a href="#doug" class="btn-secondary">
+                    <i class="fas fa-info-circle"></i>
+                    Conheça o Doug
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-content fade-in-up">
-                    <h2>Instituto Somar - Tecnologia e Educação</h2>
-                    <p><strong>Missão:</strong> Nossa missão é revolucionar a educação através da tecnologia, promovendo o desenvolvimento cognitivo e socioemocional de crianças e jovens, preparando-os para os desafios do século XXI.</p>
-                    <p><strong>Visão:</strong> Ser referência nacional na integração de humanoides na educação, criando um futuro onde o aprendizado é acessível, inovador e inspirador para todos.</p>
-                    
-                    <div class="values">
-                        <div class="value-item">
-                            <i class="fas fa-lightbulb"></i>
-                            <h4>Inovação</h4>
-                            <p>Tecnologia de ponta aplicada à educação</p>
-                        </div>
-                        <div class="value-item">
-                            <i class="fas fa-heart"></i>
-                            <h4>Inclusão</h4>
-                            <p>Educação acessível para todos</p>
-                        </div>
-                        <div class="value-item">
-                            <i class="fas fa-star"></i>
-                            <h4>Excelência</h4>
-                            <p>Qualidade pedagógica superior</p>
-                        </div>
-                        <div class="value-item">
-                            <i class="fas fa-handshake"></i>
-                            <h4>Ética</h4>
-                            <p>Responsabilidade e transparência</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="doug-image fade-in-up">
-                    <div style="background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%); padding: 3rem; border-radius: 20px; text-align: center;">
-                        <i class="fas fa-robot" style="font-size: 8rem; color: #3b82f6; margin-bottom: 1rem;"></i>
-                        <p style="color: #1e3a8a; font-weight: 600;">Logomarca Universo Doug</p>
-                        <small style="color: #64748b;">Imagem será substituída pela logomarca oficial</small>
-                    </div>
-                </div>
+    <!-- Sobre o Instituto -->
+    <section id="sobre" class="section">
+        <h2 class="section-title">Instituto Somar</h2>
+        <h3 class="section-subtitle">Tecnologia e Educação</h3>
+        
+        <p style="text-align: center; font-size: 1.1rem; color: var(--prata-escura); margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+            Missão: Revolucionar a educação através da tecnologia, proporcionando experiências de aprendizado inovadoras e inclusivas que preparam crianças e jovens para os desafios do futuro.
+        </p>
+
+        <div class="cards-grid">
+            <div class="card">
+                <i class="fas fa-lightbulb card-icon"></i>
+                <h3 class="card-title">Inovação</h3>
+                <p class="card-text">Tecnologia de ponta aplicada à educação, criando experiências únicas de aprendizado que despertam a curiosidade e o engajamento dos alunos.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-heart card-icon"></i>
+                <h3 class="card-title">Inclusão</h3>
+                <p class="card-text">Educação acessível para todos, incluindo crianças atípicas, com metodologias adaptadas que respeitam diferentes formas de aprender.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-star card-icon"></i>
+                <h3 class="card-title">Excelência</h3>
+                <p class="card-text">Qualidade pedagógica superior, baseada em pesquisas internacionais e resultados comprovados no desenvolvimento cognitivo infantil.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-handshake card-icon"></i>
+                <h3 class="card-title">Ética</h3>
+                <p class="card-text">Responsabilidade e transparência em todas as nossas ações, priorizando sempre o bem-estar e o desenvolvimento integral das crianças.</p>
             </div>
         </div>
     </section>
 
     <!-- Doug Section -->
-    <section class="doug-section" id="doug">
-        <div class="container">
-            <div class="doug-grid">
-                <div class="doug-content fade-in-up">
-                    <h2>Doug: Mais que um Robô, um Companheiro de Aprendizagem</h2>
-                    <p>Doug é o primeiro humanoide educador desenvolvido no Brasil, projetado para interagir de forma lúdica e eficaz com crianças e jovens. Sua presença em sala de aula cria um ambiente de aprendizado inovador, despertando a curiosidade e o engajamento dos alunos.</p>
+    <section id="doug" class="section">
+        <div class="doug-section">
+            <div class="doug-content">
+                <div class="doug-image">
+                    <div class="doug-placeholder">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <p style="text-align: center; margin-top: 1rem; color: var(--prata-escura);">
+                        Doug - O Humanoide Educador<br>
+                        <small>Foto real do Doug será inserida aqui</small>
+                    </p>
+                </div>
+                
+                <div>
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 2rem;">Doug: Mais que um Robô, um Companheiro de Aprendizagem</h2>
+                    <p style="font-size: 1.1rem; color: var(--prata-escura); margin-bottom: 2rem;">
+                        Doug é o primeiro humanoide educador desenvolvido no Brasil, projetado para interagir de forma lúdica e eficaz com crianças e jovens. Sua presença em sala de aula cria um ambiente de aprendizado inovador, despertando a curiosidade e o engajamento dos alunos.
+                    </p>
                     
                     <div class="doug-features">
-                        <div class="feature-item">
-                            <i class="fas fa-brain"></i>
+                        <div class="feature">
+                            <i class="fas fa-brain feature-icon"></i>
                             <div>
-                                <h4>Inteligência Artificial Avançada</h4>
-                                <p>Adaptação personalizada ao ritmo de cada aluno</p>
+                                <strong class="feature-text">Inteligência Artificial Avançada</strong>
+                                <p style="color: var(--prata-escura); margin: 0;">Adaptação personalizada ao ritmo de cada aluno</p>
                             </div>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-comments"></i>
+                        <div class="feature">
+                            <i class="fas fa-comments feature-icon"></i>
                             <div>
-                                <h4>Interação Natural</h4>
-                                <p>Comunicação fluida e envolvente</p>
+                                <strong class="feature-text">Interação Natural</strong>
+                                <p style="color: var(--prata-escura); margin: 0;">Comunicação fluida e envolvente</p>
                             </div>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-gamepad"></i>
+                        <div class="feature">
+                            <i class="fas fa-gamepad feature-icon"></i>
                             <div>
-                                <h4>Aprendizado Lúdico</h4>
-                                <p>Jogos e atividades interativas</p>
+                                <strong class="feature-text">Aprendizado Lúdico</strong>
+                                <p style="color: var(--prata-escura); margin: 0;">Jogos e atividades interativas</p>
                             </div>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-chart-line"></i>
+                        <div class="feature">
+                            <i class="fas fa-chart-line feature-icon"></i>
                             <div>
-                                <h4>Acompanhamento de Progresso</h4>
-                                <p>Relatórios detalhados de desenvolvimento</p>
+                                <strong class="feature-text">Acompanhamento de Progresso</strong>
+                                <p style="color: var(--prata-escura); margin: 0;">Relatórios detalhados de desenvolvimento</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="doug-image fade-in-up">
-                    <div style="background: rgba(255,255,255,0.1); padding: 3rem; border-radius: 20px; text-align: center; backdrop-filter: blur(10px);">
-                        <i class="fas fa-robot" style="font-size: 8rem; color: #60a5fa; margin-bottom: 1rem;"></i>
-                        <p style="font-weight: 600;">Doug - O Humanoide Educador</p>
-                        <small style="opacity: 0.8;">Foto real do Doug será inserida aqui</small>
                     </div>
                 </div>
             </div>
@@ -670,311 +693,191 @@
     </section>
 
     <!-- Workshops Section -->
-    <section class="workshops" id="workshops">
-        <div class="container">
-            <div class="section-header fade-in-up">
-                <h2>Universo Doug: 20 Temas Essenciais para o Desenvolvimento Integral</h2>
-                <p>Nossos workshops são cuidadosamente elaborados para complementar o currículo escolar, abordando temas cruciais para a formação de cidadãos conscientes e preparados para o futuro. Cada workshop é uma jornada de descoberta e aprendizado prático.</p>
+    <section id="workshops" class="section">
+        <h2 class="section-title">20 Workshops Transformadores</h2>
+        <p class="section-subtitle">
+            Cada workshop é cuidadosamente desenvolvido para diferentes faixas etárias, abordando temas essenciais para a formação integral de crianças e jovens do Ensino Fundamental.
+        </p>
+
+        <div class="workshops-grid">
+            <div class="workshop-card">
+                <h3 class="workshop-title">1. Educação Financeira</h3>
+                <p class="workshop-description">Conceitos básicos de economia, poupança, consumo consciente e planejamento financeiro adaptados para cada idade.</p>
             </div>
-
-            <div class="methodology fade-in-up">
-                <h3>Nossa Metodologia</h3>
-                <div class="methodology-grid">
-                    <div class="methodology-item">
-                        <i class="fas fa-play"></i>
-                        <h4>Abordagem Lúdica</h4>
-                        <p>Aprendizado através de jogos e atividades interativas</p>
-                    </div>
-                    <div class="methodology-item">
-                        <i class="fas fa-globe"></i>
-                        <h4>Projetos Internacionais</h4>
-                        <p>Baseado em referências educacionais mundiais</p>
-                    </div>
-                    <div class="methodology-item">
-                        <i class="fas fa-book-open"></i>
-                        <h4>Histórias Contextualizadas</h4>
-                        <p>Narrativas envolventes que facilitam a compreensão</p>
-                    </div>
-                    <div class="methodology-item">
-                        <i class="fas fa-graduation-cap"></i>
-                        <h4>Alinhado à BNCC</h4>
-                        <p>Totalmente compatível com o currículo nacional</p>
-                    </div>
-                </div>
+            <div class="workshop-card">
+                <h3 class="workshop-title">2. Autocuidado e Respeito</h3>
+                <p class="workshop-description">Desenvolvimento da autoestima, cuidados pessoais, respeito próprio e pelos outros, limites pessoais.</p>
             </div>
+            <div class="workshop-card">
+                <h3 class="workshop-title">3. Pensamento Computacional</h3>
+                <p class="workshop-description">Lógica de programação, resolução de problemas, algoritmos e introdução à tecnologia de forma lúdica.</p>
+            </div>
+            <div class="workshop-card">
+                <h3 class="workshop-title">4. Nutrição e Hábitos Saudáveis</h3>
+                <p class="workshop-description">Alimentação equilibrada, importância dos nutrientes, criação de hábitos saudáveis e prevenção de doenças.</p>
+            </div>
+            <div class="workshop-card">
+                <h3 class="workshop-title">5. Pequenos Cientistas</h3>
+                <p class="workshop-description">Experimentos científicos, método científico, curiosidade investigativa e descobertas através da prática.</p>
+            </div>
+            <div class="workshop-card">
+                <h3 class="workshop-title">6. Cidadania Digital</h3>
+                <p class="workshop-description">Uso responsável da internet, segurança online, ética digital e relacionamentos virtuais saudáveis.</p>
+            </div>
+            <div class="workshop-card">
+                <h3 class="workshop-title">7. Anti-Bullying e Amizade</h3>
+                <p class="workshop-description">Prevenção ao bullying, construção de amizades saudáveis, empatia e resolução pacífica de conflitos.</p>
+            </div>
+            <div class="workshop-card">
+                <h3 class="workshop-title">8. Doação de Órgãos</h3>
+                <p class="workshop-description">Conscientização sobre solidariedade, importância da doação e valor da vida de forma adequada à idade.</p>
+            </div>
+            <div class="workshop-card">
+                <h3 class="workshop-title">9. Prevenção de Dengue e Pragas</h3>
+                <p class="workshop-description">Educação sanitária, prevenção de doenças, cuidados com o ambiente e responsabilidade coletiva.</p>
+            </div>
+            <div class="workshop-card">
+                <h3 class="workshop-title">10. Reciclagem e Reutilização</h3>
+                <p class="workshop-description">Sustentabilidade, economia circular, criatividade com materiais recicláveis e consciência ambiental.</p>
+            </div>
+            <div class="workshop-card">
+                <h3 class="workshop-title">11. Cultura de Paz e Prevenção</h3>
+                <p class="workshop-description">Resolução pacífica de conflitos, mediação, tolerância e construção de um ambiente harmonioso.</p>
+            </div>
+            <div class="workshop-card">
+                <h3 class="workshop-title">12. Educação Ambiental</h3>
+                <p class="workshop-description">Preservação da natureza, mudanças climáticas, biodiversidade e ações sustentáveis no cotidiano.</p>
+            </div>
+            <div class="workshop-card">
+                <h3 class="workshop-title">13. Diversidade e Inclusão</h3>
+                <p class="workshop-description">Respeito às diferenças, inclusão social, diversidade cultural e construção de uma sociedade mais justa.</p>
+            </div>
+            <div class="workshop-card">
+                <h3 class="workshop-title">14. Educação para o Trânsito</h3>
+                <p class="workshop-description">Segurança viária, responsabilidade no trânsito, sinalizações e comportamento consciente nas vias.</p>
+            </div>
+            <div class="workshop-card">
+                <h3 class="workshop-title">15. Regras Sociais</h3>
+                <p class="workshop-description">Convivência em sociedade, normas de etiqueta, respeito aos espaços públicos e cidadania ativa.</p>
+            </div>
+            <div class="workshop-card">
+                <h3 class="workshop-title">16. Saúde e Bem-Estar</h3>
+                <p class="workshop-description">Cuidados com a saúde física e mental, exercícios, relaxamento e qualidade de vida.</p>
+            </div>
+            <div class="workshop-card">
+                <h3 class="workshop-title">17. Saúde e Prevenção</h3>
+                <p class="workshop-description">Prevenção de doenças, vacinação, higiene pessoal e cuidados preventivos com a saúde.</p>
+            </div>
+            <div class="workshop-card">
+                <h3 class="workshop-title">18. Respeito e Igualdade</h3>
+                <p class="workshop-description">Igualdade de gênero, respeito mútuo, direitos humanos e combate a preconceitos.</p>
+            </div>
+            <div class="workshop-card">
+                <h3 class="workshop-title">19. Habilidades Socioemocionais</h3>
+                <p class="workshop-description">Inteligência emocional, autoconhecimento, gestão de emoções e relacionamentos interpessoais.</p>
+            </div>
+            <div class="workshop-card">
+                <h3 class="workshop-title">20. Prevenção ao Uso de Drogas</h3>
+                <p class="workshop-description">Prevenção ao uso de substâncias, tomada de decisões conscientes e fortalecimento da autoestima.</p>
+            </div>
+        </div>
+    </section>
 
-            <div class="workshops-grid">
-                <!-- Workshop 1 -->
-                <div class="workshop-card fade-in-up">
-                    <h3>1. Educação Financeira</h3>
-                    <ul class="workshop-contexts">
-                        <li>Compreensão do valor do dinheiro e da importância da poupança</li>
-                        <li>Diferença entre desejo e necessidade</li>
-                        <li>Noções básicas de orçamento e planejamento</li>
-                        <li>Consumo consciente e sustentável</li>
-                    </ul>
-                </div>
-
-                <!-- Workshop 2 -->
-                <div class="workshop-card fade-in-up">
-                    <h3>2. Autocuidado e Respeito</h3>
-                    <ul class="workshop-contexts">
-                        <li>Reconhecimento e valorização das próprias qualidades</li>
-                        <li>Importância da higiene pessoal e hábitos saudáveis</li>
-                        <li>Respeito às diferenças individuais e coletivas</li>
-                        <li>Desenvolvimento da autoestima e autoconfiança</li>
-                    </ul>
-                </div>
-
-                <!-- Workshop 3 -->
-                <div class="workshop-card fade-in-up">
-                    <h3>3. Pensamento Computacional</h3>
-                    <ul class="workshop-contexts">
-                        <li>Resolução de problemas de forma lógica e sequencial</li>
-                        <li>Noções básicas de algoritmos e programação</li>
-                        <li>Desenvolvimento do raciocínio abstrato e criatividade</li>
-                        <li>Aplicação do pensamento computacional em situações do dia a dia</li>
-                    </ul>
-                </div>
-
-                <!-- Workshop 4 -->
-                <div class="workshop-card fade-in-up">
-                    <h3>4. Nutrição e Hábitos Saudáveis</h3>
-                    <ul class="workshop-contexts">
-                        <li>Identificação de alimentos saudáveis e seus benefícios</li>
-                        <li>Importância de uma alimentação equilibrada</li>
-                        <li>Hábitos de vida saudáveis: exercícios físicos e sono</li>
-                        <li>Prevenção de doenças relacionadas à má alimentação</li>
-                    </ul>
-                </div>
-
-                <!-- Workshop 5 -->
-                <div class="workshop-card fade-in-up">
-                    <h3>5. Pequenos Cientistas</h3>
-                    <ul class="workshop-contexts">
-                        <li>Despertar da curiosidade científica e observação</li>
-                        <li>Realização de experimentos simples e seguros</li>
-                        <li>Compreensão de fenômenos naturais e tecnológicos</li>
-                        <li>Estímulo ao pensamento crítico e à investigação</li>
-                    </ul>
-                </div>
-
-                <!-- Workshop 6 -->
-                <div class="workshop-card fade-in-up">
-                    <h3>6. Cidadania Digital</h3>
-                    <ul class="workshop-contexts">
-                        <li>Uso responsável e seguro da internet</li>
-                        <li>Proteção de dados pessoais e privacidade online</li>
-                        <li>Combate ao cyberbullying e fake news</li>
-                        <li>Ética e respeito nas interações digitais</li>
-                    </ul>
-                </div>
-
-                <!-- Workshop 7 -->
-                <div class="workshop-card fade-in-up">
-                    <h3>7. Anti-Bullying e Amizade</h3>
-                    <ul class="workshop-contexts">
-                        <li>Identificação e prevenção de situações de bullying</li>
-                        <li>Construção de relações de amizade saudáveis</li>
-                        <li>Empatia e respeito às diferenças</li>
-                        <li>Promoção de um ambiente escolar inclusivo e acolhedor</li>
-                    </ul>
-                </div>
-
-                <!-- Workshop 8 -->
-                <div class="workshop-card fade-in-up">
-                    <h3>8. Doação de Órgãos</h3>
-                    <ul class="workshop-contexts">
-                        <li>Conscientização sobre a importância da doação de órgãos</li>
-                        <li>Esclarecimento de mitos e verdades sobre o tema</li>
-                        <li>O impacto da doação na vida de outras pessoas</li>
-                        <li>Discussão sobre a decisão familiar e o ato de solidariedade</li>
-                    </ul>
-                </div>
-
-                <!-- Workshop 9 -->
-                <div class="workshop-card fade-in-up">
-                    <h3>9. Prevenção de Dengue e Pragas</h3>
-                    <ul class="workshop-contexts">
-                        <li>Identificação dos focos de proliferação do mosquito Aedes aegypti</li>
-                        <li>Medidas de prevenção e combate à dengue e outras doenças</li>
-                        <li>Importância da participação da comunidade na prevenção</li>
-                        <li>Cuidados com o meio ambiente para evitar pragas</li>
-                    </ul>
-                </div>
-
-                <!-- Workshop 10 -->
-                <div class="workshop-card fade-in-up">
-                    <h3>10. Reciclagem e Reutilização</h3>
-                    <ul class="workshop-contexts">
-                        <li>Diferença entre lixo e resíduo</li>
-                        <li>Importância da coleta seletiva e da reciclagem</li>
-                        <li>Criatividade na reutilização de materiais</li>
-                        <li>Redução do impacto ambiental e consumo consciente</li>
-                    </ul>
-                </div>
-
-                <!-- Workshop 11 -->
-                <div class="workshop-card fade-in-up">
-                    <h3>11. Cultura de Paz e Prevenção</h3>
-                    <ul class="workshop-contexts">
-                        <li>Resolução pacífica de conflitos</li>
-                        <li>Promoção do diálogo e da empatia</li>
-                        <li>Combate à violência em todas as suas formas</li>
-                        <li>Construção de uma cultura de respeito e solidariedade</li>
-                    </ul>
-                </div>
-
-                <!-- Workshop 12 -->
-                <div class="workshop-card fade-in-up">
-                    <h3>12. Educação Ambiental</h3>
-                    <ul class="workshop-contexts">
-                        <li>Conscientização sobre a importância da preservação do meio ambiente</li>
-                        <li>Impacto das ações humanas na natureza</li>
-                        <li>Desenvolvimento de hábitos sustentáveis</li>
-                        <li>Proteção da biodiversidade e dos recursos naturais</li>
-                    </ul>
-                </div>
-
-                <!-- Workshop 13 -->
-                <div class="workshop-card fade-in-up">
-                    <h3>13. Diversidade e Inclusão</h3>
-                    <ul class="workshop-contexts">
-                        <li>Valorização das diferentes culturas e etnias</li>
-                        <li>Respeito às pessoas com deficiência</li>
-                        <li>Combate ao preconceito e à discriminação</li>
-                        <li>Promoção de um ambiente inclusivo e acolhedor para todos</li>
-                    </ul>
-                </div>
-
-                <!-- Workshop 14 -->
-                <div class="workshop-card fade-in-up">
-                    <h3>14. Educação para o Trânsito</h3>
-                    <ul class="workshop-contexts">
-                        <li>Regras básicas de segurança no trânsito para pedestres e ciclistas</li>
-                        <li>Importância do uso do cinto de segurança e cadeirinha</li>
-                        <li>Respeito aos sinais de trânsito e aos limites de velocidade</li>
-                        <li>Comportamento seguro no transporte escolar e público</li>
-                    </ul>
-                </div>
-
-                <!-- Workshop 15 -->
-                <div class="workshop-card fade-in-up">
-                    <h3>15. Regras Sociais</h3>
-                    <ul class="workshop-contexts">
-                        <li>Importância das regras para a convivência em sociedade</li>
-                        <li>Boas maneiras e etiqueta social</li>
-                        <li>Respeito às autoridades e às instituições</li>
-                        <li>Desenvolvimento do senso de responsabilidade e cidadania</li>
-                    </ul>
-                </div>
-
-                <!-- Workshop 16 -->
-                <div class="workshop-card fade-in-up">
-                    <h3>16. Saúde e Bem-Estar</h3>
-                    <ul class="workshop-contexts">
-                        <li>Promoção da saúde física e mental</li>
-                        <li>Gerenciamento do estresse e das emoções</li>
-                        <li>Importância do sono e do descanso</li>
-                        <li>Desenvolvimento de hábitos saudáveis para uma vida plena</li>
-                    </ul>
-                </div>
-
-                <!-- Workshop 17 -->
-                <div class="workshop-card fade-in-up">
-                    <h3>17. Saúde e Prevenção</h3>
-                    <ul class="workshop-contexts">
-                        <li>Prevenção de doenças e infecções</li>
-                        <li>Importância da vacinação</li>
-                        <li>Cuidados com a higiene pessoal e do ambiente</li>
-                        <li>Noções básicas de primeiros socorros</li>
-                    </ul>
-                </div>
-
-                <!-- Workshop 18 -->
-                <div class="workshop-card fade-in-up">
-                    <h3>18. Respeito e Igualdade</h3>
-                    <ul class="workshop-contexts">
-                        <li>Reconhecimento e valorização da diversidade humana</li>
-                        <li>Combate a todas as formas de preconceito e discriminação</li>
-                        <li>Promoção da igualdade de direitos e oportunidades</li>
-                        <li>Construção de uma sociedade justa e equitativa</li>
-                    </ul>
-                </div>
-
-                <!-- Workshop 19 -->
-                <div class="workshop-card fade-in-up">
-                    <h3>19. Habilidades Socioemocionais</h3>
-                    <ul class="workshop-contexts">
-                        <li>Autoconhecimento e autoconsciência</li>
-                        <li>Gerenciamento de emoções e impulsos</li>
-                        <li>Empatia e habilidades de relacionamento</li>
-                        <li>Tomada de decisões responsáveis e resolução de problemas</li>
-                    </ul>
-                </div>
-
-                <!-- Workshop 20 -->
-                <div class="workshop-card fade-in-up">
-                    <h3>20. Prevenção ao Uso de Drogas</h3>
-                    <ul class="workshop-contexts">
-                        <li>Conscientização sobre os riscos e consequências do uso de drogas</li>
-                        <li>Desenvolvimento de habilidades de resistência à pressão de grupo</li>
-                        <li>Importância de escolhas saudáveis e estilo de vida equilibrado</li>
-                        <li>Canais de ajuda e apoio para quem precisa</li>
-                    </ul>
+    <!-- Projeto Autismo -->
+    <section class="section">
+        <div class="doug-section">
+            <div style="padding: 3rem; text-align: center;">
+                <h2 class="section-title">Projeto Especial: Crianças Atípicas</h2>
+                <p style="font-size: 1.2rem; color: var(--prata-escura); margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    Doug foi especialmente programado para trabalhar com crianças autistas e atípicas, oferecendo uma abordagem personalizada e sensível às suas necessidades específicas.
+                </p>
+                
+                <div class="cards-grid" style="margin-top: 2rem;">
+                    <div class="card">
+                        <i class="fas fa-puzzle-piece card-icon"></i>
+                        <h3 class="card-title">Adaptação Sensorial</h3>
+                        <p class="card-text">Ajustes de som, luz e movimento para criar um ambiente confortável e acolhedor.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-clock card-icon"></i>
+                        <h3 class="card-title">Ritmo Personalizado</h3>
+                        <p class="card-text">Atividades adaptadas ao tempo e necessidades individuais de cada criança.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-hands-helping card-icon"></i>
+                        <h3 class="card-title">Comunicação Alternativa</h3>
+                        <p class="card-text">Múltiplas formas de comunicação, incluindo gestos, símbolos e tecnologia assistiva.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Autism Project Section -->
-    <section class="autism-project">
-        <div class="container">
-            <div class="autism-content fade-in-up">
-                <h2>Inclusão e Desenvolvimento: Atividades Adaptadas para Crianças Autistas</h2>
-                <p>Além dos workshops regulares, o Universo Doug oferece um projeto dedicado a atividades adaptadas para crianças autistas, utilizando a interação com o humanoide Doug para estimular o desenvolvimento cognitivo, social e emocional de forma personalizada e inclusiva. Nossa abordagem especializada reconhece as necessidades únicas de cada criança, promovendo um ambiente seguro e acolhedor para o aprendizado.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA Section -->
-    <section class="final-cta" id="contact">
-        <div class="container">
-            <div class="fade-in-up">
-                <h2>Transforme a Educação na Sua Instituição!</h2>
-                <p>Junte-se ao Instituto Somar e traga o Universo Doug para seus alunos. Ofereça uma experiência educacional inovadora que prepara as futuras gerações para um mundo em constante evolução.</p>
-                
-                <a href="tel:+5567992837970" class="cta-button" style="font-size: 1.3rem; padding: 18px 36px; margin: 1rem;">
-                    <i class="fas fa-phone"></i> Ligue Agora!
-                </a>
-                
-                <a href="https://wa.me/5567992837970" class="cta-button" style="font-size: 1.3rem; padding: 18px 36px; margin: 1rem; background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);">
-                    <i class="fab fa-whatsapp"></i> WhatsApp
-                </a>
-
-                <div class="contact-info">
-                    <h3>Entre em Contato Conosco</h3>
-                    <div class="phone-number">
-                        <i class="fas fa-phone"></i> (67) 99283-7970
+    <!-- Contato -->
+    <section id="contato" class="section">
+        <div class="contact-section">
+            <div style="padding: 3rem;">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h2 class="contact-title">Transforme a Educação da sua Cidade</h2>
+                        <p class="contact-subtitle">
+                            Seja pioneiro em trazer a tecnologia educacional mais avançada do Brasil para sua instituição. Doug está pronto para revolucionar o aprendizado!
+                        </p>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone contact-icon"></i>
+                            <div>
+                                <strong>Telefone/WhatsApp</strong>
+                                <p>(67) 99283-7970</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-building contact-icon"></i>
+                            <div>
+                                <strong>Instituto Somar</strong>
+                                <p>Tecnologia e Educação</p>
+                            </div>
+                        </div>
+                        
+                        <a href="https://wa.me/5567992837970?text=Olá! Gostaria de saber mais sobre o Projeto Universo Doug e agendar uma demonstração." class="whatsapp-button">
+                            <i class="fab fa-whatsapp"></i>
+                            Falar no WhatsApp
+                        </a>
                     </div>
-                    <p style="margin-top: 1rem; opacity: 0.9;">
-                        Agende uma demonstração gratuita e veja como Doug pode revolucionar o aprendizado na sua escola!
-                    </p>
+                    
+                    <div style="text-align: center;">
+                        <i class="fas fa-rocket" style="font-size: 8rem; opacity: 0.3; margin-bottom: 2rem;"></i>
+                        <h3 style="font-family: 'Orbitron', monospace; font-size: 1.5rem; margin-bottom: 1rem;">
+                            Demonstração Gratuita
+                        </h3>
+                        <p style="opacity: 0.9; margin-bottom: 2rem;">
+                            Agende uma apresentação exclusiva do Doug para sua equipe e veja como a tecnologia pode transformar a educação na sua instituição.
+                        </p>
+                        <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 15px; backdrop-filter: blur(10px);">
+                            <p><strong>✓ Apresentação personalizada</strong></p>
+                            <p><strong>✓ Demonstração ao vivo</strong></p>
+                            <p><strong>✓ Consultoria educacional</strong></p>
+                            <p><strong>✓ Proposta comercial</strong></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Instituto Somar - Tecnologia e Educação. Todos os direitos reservados.</p>
-            <p style="margin-top: 0.5rem; opacity: 0.7;">Desenvolvido com tecnologia e paixão pela educação.</p>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Instituto Somar - Tecnologia e Educação. Todos os direitos reservados.</p>
+            <p style="margin-top: 0.5rem; opacity: 0.8;">
+                Universo Doug - O primeiro humanoide educador do Brasil
+            </p>
         </div>
     </footer>
 
     <script>
-        // Smooth scrolling for navigation links
+        // Scroll suave para links internos
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -988,59 +891,35 @@
             });
         });
 
-        // Add animation on scroll
+        // Efeito de scroll no header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(248, 250, 252, 0.98)';
+                header.style.boxShadow = '0 2px 20px rgba(30, 58, 138, 0.1)';
+            } else {
+                header.style.background = 'rgba(248, 250, 252, 0.95)';
+                header.style.boxShadow = 'none';
+            }
+        });
+
+        // Animação de entrada dos elementos
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
         };
 
-        const observer = new IntersectionObserver((entries) => {
+        const observer = new IntersectionObserver(function(entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+                    entry.target.classList.add('fade-in-up');
                 }
             });
         }, observerOptions);
 
-        // Observe all fade-in-up elements
-        document.querySelectorAll('.fade-in-up').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+        // Observar elementos para animação
+        document.querySelectorAll('.card, .workshop-card, .feature').forEach(el => {
             observer.observe(el);
-        });
-
-        // Header background on scroll
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.background = 'linear-gradient(135deg, rgba(30, 58, 138, 0.95) 0%, rgba(59, 130, 246, 0.95) 100%)';
-            } else {
-                header.style.background = 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)';
-            }
-        });
-
-        // Mobile menu toggle (if needed)
-        const mobileMenuToggle = () => {
-            // Implementation for mobile menu if needed
-        };
-
-        // Add click tracking for CTA buttons
-        document.querySelectorAll('.cta-button').forEach(button => {
-            button.addEventListener('click', (e) => {
-                // Add analytics tracking here if needed
-                console.log('CTA button clicked:', e.target.textContent);
-            });
-        });
-
-        // Parallax effect for hero section
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const hero = document.querySelector('.hero');
-            if (hero) {
-                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-            }
         });
     </script>
 </body>
