@@ -571,7 +571,6 @@
                 <li><a href="#sobre" class="nav-link">Sobre</a></li>
                 <li><a href="#doug" class="nav-link">Doug</a></li>
                 <li><a href="#workshops" class="nav-link">Workshops</a></li>
-                <li><a href="#contato" class="nav-link">Contato</a></li>
                 <li><a href="#contato" class="cta-button">Entre em Contato</a></li>
             </ul>
         </nav>
@@ -643,7 +642,6 @@
             <div class="doug-content">
                 <img src="doug_photo.png" alt="Doug - O Humanoide Educador" style="width: 100%; max-width: 400px; border-radius: 20px;">
                         Doug - O Humanoide Educador<br>
-                    </p>
                 </div>
                 
                 <div>
@@ -679,9 +677,6 @@
                             <div>
                                 <strong class="feature-text">Acompanhamento de Progresso</strong>
                                 <p style="color: var(--prata-escura); margin: 0;">Relatórios detalhados de desenvolvimento</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
