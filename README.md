@@ -641,8 +641,7 @@
     <section id="doug" class="section">
         <div class="doug-section">
             <div class="doug-content">
-                <div class="doug_photo">                    
-                    <p style="width: 100%; max-width: 400px; border-radius: 20px;">
+                <img src="doug_photo.png" alt="Doug - O Humanoide Educador" style="width: 100%; max-width: 400px; border-radius: 20px;">
                         Doug - O Humanoide Educador<br>
                     </p>
                 </div>
