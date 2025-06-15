@@ -5,26 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Universo Doug - O Primeiro Humanoide Educador do Brasil</title>
     <meta name="description" content="Conheça Doug, o primeiro humanoide educador do Brasil. Instituto Somar apresenta tecnologia revolucionária para transformar a educação com 20 workshops inovadores.">
-
-    <!-- Fontes Tecnológicas -->
+    <!-- Fontes -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Exo+2:wght@400;600&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Particles.js CDN -->
+    <!-- Slick Carousel -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <!-- Particles.js -->
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-
     <style>
         :root {
             --azul-primario: #1E3A8A;
             --azul-secundario: #3B82F6;
             --azul-neon: #3cf4ff;
             --azul-claro: #DBEAFE;
+            --azul-autismo: #3568e6;
             --prata-primaria: #E5E7EB;
             --prata-escura: #6B7280;
             --prata-metalica: #F8FAFC;
             --branco: #FFFFFF;
             --preto: #000000;
-            --glass: rgba(255,255,255,0.11);
+            --amarelo-autismo: #FFD84B;
+            --vermelho-autismo: #FF6363;
+            --verde-autismo: #33C67A;
         }
         * { margin: 0; padding: 0; box-sizing: border-box;}
         body {
@@ -35,8 +38,7 @@
             overflow-x: hidden;
         }
         html { scroll-behavior: smooth;}
-
-        /* Header */
+        /* HEADER */
         .header {
             position: fixed;
             top: 0; left: 0; width: 100%;
@@ -56,15 +58,15 @@
         }
         .logo {
             font-family: 'Orbitron', monospace;
-            font-size: 2.1rem; font-weight: 900;
-            color: var(--azul-neon);
-            text-shadow: 0 0 14px var(--azul-neon),0 2px 10px #1e3a8a88;
-            text-decoration: none;
-            display: flex; align-items: center; gap: 0.7rem;
+            font-size: 2.1rem;
+            font-weight: 900;
+            color: var(--azul-primario);
             letter-spacing: 2.5px;
+            text-shadow: none;
+            display: flex; align-items: center; gap: 0.7rem;
         }
         .logo img {
-            height: 46px; width: auto; background: transparent; filter: drop-shadow(0 0 12px #00eaffaa);
+            height: 46px; width: auto; background: transparent; filter: none;
         }
         .nav-menu {
             display: flex; list-style: none; gap: 1.1rem; align-items: center; flex-wrap: wrap;
@@ -95,7 +97,6 @@
             font-weight: 800;
             box-shadow: 0 0 16px #00eaff90, 0 2px 10px #1E3A8A30;
             border: 1.7px solid #3cf4ff;
-            transition: all 0.19s cubic-bezier(.51,1.16,.67,1.05);
         }
         .cta-button:hover {
             color: #fff;
@@ -104,7 +105,8 @@
             transform: scale(1.09);
         }
         .spacer { height: 90px; }
-        /* Hero Section com Partículas */
+
+        /* HERO */
         #particles-js {
             position: absolute;
             width: 100vw; height: 100vh; z-index: 0; top:0; left:0;
@@ -134,7 +136,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            text-shadow: 0 4px 18px #00f8ff55, 0 2px 12px #1E3A8A55;
+            text-shadow: none;
             letter-spacing: 2.7px;
         }
         .hero-subtitle {
@@ -197,12 +199,19 @@
             border: 2.3px solid #fff;
         }
         .btn-secondary:hover { background: #fff; color: #1941a0; border-color:#00eaff;}
-        /* Seções e Glassmorphism */
+        /* Seções */
         .section {
             padding: 2rem 2rem;
             max-width: 1200px;
             margin: 0 auto 2.2rem auto;
             position: relative;
+        }
+        /* Instituto Somar */
+        .section-title.somar-title {
+            color: var(--azul-primario);
+            background: none;
+            -webkit-text-fill-color: unset;
+            text-shadow: none;
         }
         .section-title {
             font-family: 'Orbitron', monospace;
@@ -215,16 +224,29 @@
             letter-spacing: 2.2px;
             text-shadow: 0 0 12px #3cf4ff60;
         }
+        .section-title.workshops-title,
+        .section-title.atipicas-title {
+            color: var(--azul-primario);
+            background: none;
+            -webkit-text-fill-color: unset;
+            text-shadow: none;
+        }
+        .section-subtitle,
+        .workshop-title {
+            color: var(--azul-autismo) !important;
+            background: none;
+            -webkit-text-fill-color: unset;
+        }
         .section-subtitle {
             font-family: 'Exo 2', sans-serif;
             font-size: 1.09rem;
             text-align: center;
-            color: #8ec7ec;
             margin-bottom: 1.5rem;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
         }
+        /* Cards */
         .cards-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -232,12 +254,12 @@
             margin-top: 1.1rem;
         }
         .card {
-            background: var(--glass);
+            background: rgba(255,255,255,0.13);
             border-radius: 18px;
             padding: 1.35rem;
             box-shadow: 0 8px 32px #3cf4ff12, 0 0 0 1.5px #3cf4ff24;
             transition: all 0.23s;
-            border: 1.5px solid #3cf4ff66;
+            border: 1.5px solid #3cf4ff44;
             position: relative; overflow: hidden;
             backdrop-filter: blur(8px);
         }
@@ -248,33 +270,19 @@
             height: 4px;
             background: linear-gradient(92deg, #3cf4ff 30%, #1e3a8a 90%);
         }
-        .card:hover {
-            transform: translateY(-6px) scale(1.025) rotate(-1.2deg);
-            box-shadow: 0 0 28px #3cf4ffaa, 0 12px 32px #19386622;
-            border-color: #00eaff;
-        }
         .card-icon {
             font-size: 2.5rem;
             color: #3cf4ff;
             margin-bottom: 0.7rem;
-            text-shadow: 0 0 10px #3cf4ff55;
         }
-        .card-title {
-            font-family: 'Exo 2', sans-serif;
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 0.6rem;
-            color: var(--azul-primario);
-        }
-        .card-text { color: var(--prata-escura);}
         /* Doug Section */
         .doug-section {
-            background: linear-gradient(135deg, #121e33 60%, #3cf4ff15 100%);
+            background: linear-gradient(120deg, #fafdff 60%, #c5e9ff 100%);
             border-radius: 26px;
             margin: 1.7rem 0;
             overflow: hidden;
-            box-shadow: 0 0 32px #3cf4ff14;
-            border: 1.2px solid #3cf4ff44;
+            box-shadow: 0 0 32px #3cf4ff0a;
+            border: 1.2px solid #b5eaff;
         }
         .doug-content {
             display: grid;
@@ -288,50 +296,82 @@
             width: 100%; max-width: 350px; border-radius: 22px;
             margin: 0 auto;
             background: transparent;
-            box-shadow: 0 0 60px #3cf4ffdd, 0 8px 30px #19386655;
+            box-shadow: 0 0 40px #3cf4ff44, 0 8px 30px #19386622;
             transition: 0.32s cubic-bezier(.68,-0.55,.27,1.55);
-            filter: drop-shadow(0 0 24px #1e8aff99);
+            filter: drop-shadow(0 0 8px #1e8aff33);
         }
         .doug-image img:hover {
             transform: scale(1.07) rotate(-2deg);
-            box-shadow: 0 0 120px #3cf4fff3, 0 14px 40px #1E3A8A66;
-            filter: brightness(1.1) drop-shadow(0 0 32px #3cf4ff);
+            box-shadow: 0 0 88px #3cf4ffa3, 0 14px 40px #1E3A8A20;
+            filter: brightness(1.08) drop-shadow(0 0 24px #3cf4ff66);
         }
         .doug-features { display: grid; gap: 1.07rem;}
         .feature {
             display: flex; align-items: center; gap: 1rem; padding: 0.77rem;
-            background: var(--glass);
+            background: rgba(255,255,255,0.93);
             border-radius: 13px;
-            box-shadow: 0 3px 10px #3cf4ff16;
-            border: 1.3px solid #3cf4ff30;
+            box-shadow: 0 3px 10px #3cf4ff09;
+            border: 1.3px solid #c7eaff;
         }
         .feature-icon { font-size: 1.7rem; color: #3cf4ff; min-width: 42px; text-align: center;}
         .feature-text { font-weight: 600; color: var(--azul-primario);}
-        .workshops-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-            margin-top: 1.1rem;
+        /* Workshops */
+        .workshops-carousel {
+            margin: 1.2rem auto 0 auto;
+        }
+        .slick-slide {
+            display: flex !important;
+            align-items: stretch;
+            justify-content: center;
+            height: 100%;
         }
         .workshop-card {
-            background: var(--glass);
+            background: rgba(255,255,255,0.92);
             border-radius: 12px;
-            padding: 1rem;
-            box-shadow: 0 5px 15px #3cf4ff0c;
-            transition: all 0.21s;
-            border-left: 4px solid #3cf4ff;
-            border-right: 1.5px solid #19386633;
+            padding: 1.1rem 1.3rem;
+            box-shadow: 0 5px 15px #3cf4ff08;
+            border-left: 5px solid #3cf4ff;
+            border-right: 1.5px solid #19386613;
+            min-width: 260px;
+            max-width: 310px;
+            height: 100%;
+            margin: 0 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
-        .workshop-card:hover {
-            transform: scale(1.032) rotate(-0.7deg);
-            box-shadow: 0 0 25px #3cf4ff99, 0 12px 20px #19386616;
-            border-left: 4px solid #00eaff;
-            border-right: 1.5px solid #00eaff33;
+        .workshop-title {
+            font-family: 'Exo 2', sans-serif;
+            font-weight: 700;
+            color: var(--azul-autismo) !important;
+            margin-bottom: 0.37rem;
+            font-size: 1.11rem;
         }
-        .workshop-title { font-family: 'Exo 2', sans-serif; font-weight: 600; color: var(--azul-primario); margin-bottom: 0.37rem;}
-        .workshop-description { color: var(--prata-escura); font-size: 0.97rem;}
+        .workshop-description { color: var(--prata-escura); font-size: 0.95rem;}
+        /* Crianças Atípicas */
+        .atipicas-section {
+            background: #fff;
+            border-radius: 28px;
+            box-shadow: 0 0 34px #3cf4ff0a;
+            border: 1.2px solid #e6f6ff;
+            padding: 2.3rem 1rem 1.5rem 1rem;
+        }
+        .atipicas-icons {
+            display: flex; gap: 14px; justify-content: center; margin-bottom: 1.1rem; font-size: 2.3rem;
+        }
+        .puzzle-autismo { color: var(--azul-autismo);}
+        .heart-autismo { color: var(--vermelho-autismo);}
+        .smile-autismo { color: var(--amarelo-autismo);}
+        .balloon-autismo { color: var(--verde-autismo);}
+        .atipicas-title {
+            color: var(--azul-primario);
+            background: none;
+            -webkit-text-fill-color: unset;
+            text-shadow: none;
+        }
+        /* Contato */
         .contact-section {
-            background: linear-gradient(135deg, #1e3a8a 70%, #3cf4ff 100%);
+            background: linear-gradient(135deg, #1e3a8a 80%, #3cf4ff 100%);
             color: var(--branco);
             border-radius: 28px;
             text-align: center;
@@ -365,6 +405,13 @@
             box-shadow: 0 0 14px #3cf4ff60;
         }
         .whatsapp-button:hover { background: #1e3a8a; color: #fff; box-shadow: 0 0 30px #3cf4ffaa;}
+        /* Mini Doug */
+        .mini-doug {
+            width: 60px; height: auto;
+            display: block;
+            margin: 0 auto 10px auto;
+        }
+        /* Footer */
         .footer {
             background: #131e38;
             color: var(--branco);
@@ -391,7 +438,6 @@
             .header { font-size: 1rem;}
             .section, .hero-content { padding: 0.7rem;}
         }
-        /* Animação fade-in-up para elementos */
         @keyframes fadeInUp {
             from {opacity: 0; transform: translateY(30px);}
             to {opacity: 1; transform: translateY(0);}
@@ -417,7 +463,6 @@
         </nav>
     </header>
     <div class="spacer"></div>
-
     <!-- Hero Section -->
     <section class="hero">
         <div id="particles-js"></div>
@@ -446,11 +491,10 @@
             </div>
         </div>
     </section>
-
     <!-- Sobre o Instituto -->
     <section id="sobre" class="section fade-in-up">
-        <h2 class="section-title">Instituto Somar</h2>
-        <h3 class="section-subtitle">Tecnologia e Educação</h3>
+        <h2 class="section-title somar-title">Instituto Somar</h2>
+        <h3 class="section-subtitle" style="color: #1E3A8A;">Tecnologia e Educação</h3>
         <p style="text-align: center; font-size: 1.1rem; color: var(--prata-escura); margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
             Missão: Revolucionar a educação através da tecnologia, proporcionando experiências de aprendizado inovadoras e inclusivas que preparam crianças e jovens para os desafios do futuro.
         </p>
@@ -469,42 +513,43 @@
             </div>
         </div>
     </section>
-
     <!-- Doug Section -->
     <section id="doug" class="section fade-in-up">
         <div class="doug-section">
             <div class="doug-content">
                 <div class="doug-image">
                     <img src="doug_photo.png" alt="Doug - O Humanoide Educador" />
-                    <p style="text-align: center; margin-top: 1rem; color: var(--prata-escura);">
+                    <p style="text-align: center; margin-top: 1rem; color: var(--azul-primario);">
                         Doug - O Humanoide Educador<br>
                         <small>Foto real do Doug</small>
                     </p>
                 </div>
                 <div>
-                    <h2 class="section-title" style="text-align: left; margin-bottom: 1.2rem;">Doug: Mais que um Robô, um Companheiro de Aprendizagem</h2>
-                    <p style="font-size: 1.08rem; color: var(--prata-escura); margin-bottom: 1.2rem;">
+                    <h2 class="section-title" style="color: #1E3A8A; background:none; text-align: left; margin-bottom: 1.2rem; -webkit-text-fill-color: unset; text-shadow:none;">
+                        Doug: Mais que um Robô, um Companheiro de Aprendizagem
+                    </h2>
+                    <p style="font-size: 1.08rem; color: #1E3A8A; margin-bottom: 1.2rem;">
                         Doug é o primeiro humanoide educador desenvolvido no Brasil, projetado para interagir de forma lúdica e eficaz com crianças e jovens. Sua presença em sala de aula cria um ambiente de aprendizado inovador, despertando a curiosidade e o engajamento dos alunos.
                     </p>
                     <div class="doug-features">
                         <div class="feature"><i class="fas fa-brain feature-icon"></i>
                             <div><strong class="feature-text">Inteligência Artificial Avançada</strong>
-                                <p style="color: var(--prata-escura); margin: 0;">Adaptação personalizada ao ritmo de cada aluno</p>
+                                <p style="color: #3B82F6; margin: 0;">Adaptação personalizada ao ritmo de cada aluno</p>
                             </div>
                         </div>
                         <div class="feature"><i class="fas fa-comments feature-icon"></i>
                             <div><strong class="feature-text">Interação Natural</strong>
-                                <p style="color: var(--prata-escura); margin: 0;">Comunicação fluida e envolvente</p>
+                                <p style="color: #3B82F6; margin: 0;">Comunicação fluida e envolvente</p>
                             </div>
                         </div>
                         <div class="feature"><i class="fas fa-gamepad feature-icon"></i>
                             <div><strong class="feature-text">Aprendizado Lúdico</strong>
-                                <p style="color: var(--prata-escura); margin: 0;">Jogos e atividades interativas</p>
+                                <p style="color: #3B82F6; margin: 0;">Jogos e atividades interativas</p>
                             </div>
                         </div>
                         <div class="feature"><i class="fas fa-chart-line feature-icon"></i>
                             <div><strong class="feature-text">Acompanhamento de Progresso</strong>
-                                <p style="color: var(--prata-escura); margin: 0;">Relatórios detalhados de desenvolvimento</p>
+                                <p style="color: #3B82F6; margin: 0;">Relatórios detalhados de desenvolvimento</p>
                             </div>
                         </div>
                     </div>
@@ -512,63 +557,65 @@
             </div>
         </div>
     </section>
-
     <!-- Workshops Section -->
     <section id="workshops" class="section fade-in-up">
-        <h2 class="section-title">20 Workshops Transformadores</h2>
+        <h2 class="section-title workshops-title">20 Workshops Transformadores</h2>
         <p class="section-subtitle">
             Cada workshop é cuidadosamente desenvolvido para diferentes faixas etárias, abordando temas essenciais para a formação integral de crianças e jovens do Ensino Fundamental.
         </p>
-        <div class="workshops-grid">
-            <div class="workshop-card"><h3 class="workshop-title">1. Educação Financeira</h3><p class="workshop-description">Conceitos básicos de economia, poupança, consumo consciente e planejamento financeiro adaptados para cada idade.</p></div>
-            <div class="workshop-card"><h3 class="workshop-title">2. Autocuidado e Respeito</h3><p class="workshop-description">Desenvolvimento da autoestima, cuidados pessoais, respeito próprio e pelos outros, limites pessoais.</p></div>
-            <div class="workshop-card"><h3 class="workshop-title">3. Pensamento Computacional</h3><p class="workshop-description">Lógica de programação, resolução de problemas, algoritmos e introdução à tecnologia de forma lúdica.</p></div>
-            <div class="workshop-card"><h3 class="workshop-title">4. Nutrição e Hábitos Saudáveis</h3><p class="workshop-description">Alimentação equilibrada, importância dos nutrientes, criação de hábitos saudáveis e prevenção de doenças.</p></div>
-            <div class="workshop-card"><h3 class="workshop-title">5. Pequenos Cientistas</h3><p class="workshop-description">Experimentos científicos, método científico, curiosidade investigativa e descobertas através da prática.</p></div>
-            <div class="workshop-card"><h3 class="workshop-title">6. Cidadania Digital</h3><p class="workshop-description">Uso responsável da internet, segurança online, ética digital e relacionamentos virtuais saudáveis.</p></div>
-            <div class="workshop-card"><h3 class="workshop-title">7. Anti-Bullying e Amizade</h3><p class="workshop-description">Prevenção ao bullying, construção de amizades saudáveis, empatia e resolução pacífica de conflitos.</p></div>
-            <div class="workshop-card"><h3 class="workshop-title">8. Doação de Órgãos</h3><p class="workshop-description">Conscientização sobre solidariedade, importância da doação e valor da vida de forma adequada à idade.</p></div>
-            <div class="workshop-card"><h3 class="workshop-title">9. Prevenção de Dengue e Pragas</h3><p class="workshop-description">Educação sanitária, prevenção de doenças, cuidados com o ambiente e responsabilidade coletiva.</p></div>
-            <div class="workshop-card"><h3 class="workshop-title">10. Reciclagem e Reutilização</h3><p class="workshop-description">Sustentabilidade, economia circular, criatividade com materiais recicláveis e consciência ambiental.</p></div>
-            <div class="workshop-card"><h3 class="workshop-title">11. Cultura de Paz e Prevenção</h3><p class="workshop-description">Resolução pacífica de conflitos, mediação, tolerância e construção de um ambiente harmonioso.</p></div>
-            <div class="workshop-card"><h3 class="workshop-title">12. Educação Ambiental</h3><p class="workshop-description">Preservação da natureza, mudanças climáticas, biodiversidade e ações sustentáveis no cotidiano.</p></div>
-            <div class="workshop-card"><h3 class="workshop-title">13. Diversidade e Inclusão</h3><p class="workshop-description">Respeito às diferenças, inclusão social, diversidade cultural e construção de uma sociedade mais justa.</p></div>
-            <div class="workshop-card"><h3 class="workshop-title">14. Educação para o Trânsito</h3><p class="workshop-description">Segurança viária, responsabilidade no trânsito, sinalizações e comportamento consciente nas vias.</p></div>
-            <div class="workshop-card"><h3 class="workshop-title">15. Regras Sociais</h3><p class="workshop-description">Convivência em sociedade, normas de etiqueta, respeito aos espaços públicos e cidadania ativa.</p></div>
-            <div class="workshop-card"><h3 class="workshop-title">16. Saúde e Bem-Estar</h3><p class="workshop-description">Cuidados com a saúde física e mental, exercícios, relaxamento e qualidade de vida.</p></div>
-            <div class="workshop-card"><h3 class="workshop-title">17. Saúde e Prevenção</h3><p class="workshop-description">Prevenção de doenças, vacinação, higiene pessoal e cuidados preventivos com a saúde.</p></div>
-            <div class="workshop-card"><h3 class="workshop-title">18. Respeito e Igualdade</h3><p class="workshop-description">Igualdade de gênero, respeito mútuo, direitos humanos e combate a preconceitos.</p></div>
-            <div class="workshop-card"><h3 class="workshop-title">19. Habilidades Socioemocionais</h3><p class="workshop-description">Inteligência emocional, autoconhecimento, gestão de emoções e relacionamentos interpessoais.</p></div>
-            <div class="workshop-card"><h3 class="workshop-title">20. Prevenção ao Uso de Drogas</h3><p class="workshop-description">Prevenção ao uso de substâncias, tomada de decisões conscientes e fortalecimento da autoestima.</p></div>
+        <div class="workshops-carousel">
+            <div class="workshop-card"><h3 class="workshop-title">Educação Financeira</h3><p class="workshop-description">Conceitos básicos de economia, poupança, consumo consciente e planejamento financeiro adaptados para cada idade.</p></div>
+            <div class="workshop-card"><h3 class="workshop-title">Autocuidado e Respeito</h3><p class="workshop-description">Desenvolvimento da autoestima, cuidados pessoais, respeito próprio e pelos outros, limites pessoais.</p></div>
+            <div class="workshop-card"><h3 class="workshop-title">Pensamento Computacional</h3><p class="workshop-description">Lógica de programação, resolução de problemas, algoritmos e introdução à tecnologia de forma lúdica.</p></div>
+            <div class="workshop-card"><h3 class="workshop-title">Nutrição e Hábitos Saudáveis</h3><p class="workshop-description">Alimentação equilibrada, importância dos nutrientes, criação de hábitos saudáveis e prevenção de doenças.</p></div>
+            <div class="workshop-card"><h3 class="workshop-title">Pequenos Cientistas</h3><p class="workshop-description">Experimentos científicos, método científico, curiosidade investigativa e descobertas através da prática.</p></div>
+            <div class="workshop-card"><h3 class="workshop-title">Cidadania Digital</h3><p class="workshop-description">Uso responsável da internet, segurança online, ética digital e relacionamentos virtuais saudáveis.</p></div>
+            <div class="workshop-card"><h3 class="workshop-title">Anti-Bullying e Amizade</h3><p class="workshop-description">Prevenção ao bullying, construção de amizades saudáveis, empatia e resolução pacífica de conflitos.</p></div>
+            <div class="workshop-card"><h3 class="workshop-title">Doação de Órgãos</h3><p class="workshop-description">Conscientização sobre solidariedade, importância da doação e valor da vida de forma adequada à idade.</p></div>
+            <div class="workshop-card"><h3 class="workshop-title">Prevenção de Dengue e Pragas</h3><p class="workshop-description">Educação sanitária, prevenção de doenças, cuidados com o ambiente e responsabilidade coletiva.</p></div>
+            <div class="workshop-card"><h3 class="workshop-title">Reciclagem e Reutilização</h3><p class="workshop-description">Sustentabilidade, economia circular, criatividade com materiais recicláveis e consciência ambiental.</p></div>
+            <div class="workshop-card"><h3 class="workshop-title">Cultura de Paz e Prevenção</h3><p class="workshop-description">Resolução pacífica de conflitos, mediação, tolerância e construção de um ambiente harmonioso.</p></div>
+            <div class="workshop-card"><h3 class="workshop-title">Educação Ambiental</h3><p class="workshop-description">Preservação da natureza, mudanças climáticas, biodiversidade e ações sustentáveis no cotidiano.</p></div>
+            <div class="workshop-card"><h3 class="workshop-title">Diversidade e Inclusão</h3><p class="workshop-description">Respeito às diferenças, inclusão social, diversidade cultural e construção de uma sociedade mais justa.</p></div>
+            <div class="workshop-card"><h3 class="workshop-title">Educação para o Trânsito</h3><p class="workshop-description">Segurança viária, responsabilidade no trânsito, sinalizações e comportamento consciente nas vias.</p></div>
+            <div class="workshop-card"><h3 class="workshop-title">Regras Sociais</h3><p class="workshop-description">Convivência em sociedade, normas de etiqueta, respeito aos espaços públicos e cidadania ativa.</p></div>
+            <div class="workshop-card"><h3 class="workshop-title">Saúde e Bem-Estar</h3><p class="workshop-description">Cuidados com a saúde física e mental, exercícios, relaxamento e qualidade de vida.</p></div>
+            <div class="workshop-card"><h3 class="workshop-title">Saúde e Prevenção</h3><p class="workshop-description">Prevenção de doenças, vacinação, higiene pessoal e cuidados preventivos com a saúde.</p></div>
+            <div class="workshop-card"><h3 class="workshop-title">Respeito e Igualdade</h3><p class="workshop-description">Igualdade de gênero, respeito mútuo, direitos humanos e combate a preconceitos.</p></div>
+            <div class="workshop-card"><h3 class="workshop-title">Habilidades Socioemocionais</h3><p class="workshop-description">Inteligência emocional, autoconhecimento, gestão de emoções e relacionamentos interpessoais.</p></div>
+            <div class="workshop-card"><h3 class="workshop-title">Prevenção ao Uso de Drogas</h3><p class="workshop-description">Prevenção ao uso de substâncias, tomada de decisões conscientes e fortalecimento da autoestima.</p></div>
         </div>
     </section>
-
-    <!-- Projeto Autismo -->
-    <section class="section fade-in-up">
-        <div class="doug-section">
-            <div style="padding: 2.2rem; text-align: center;">
-                <h2 class="section-title">Projeto Especial: Crianças Atípicas</h2>
-                <p style="font-size: 1.15rem; color: var(--prata-escura); margin-bottom: 1.2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-                    Doug foi especialmente programado para trabalhar com crianças autistas e atípicas, oferecendo uma abordagem personalizada e sensível às suas necessidades específicas.
-                </p>
-                <div class="cards-grid" style="margin-top: 1rem;">
-                    <div class="card"><i class="fas fa-puzzle-piece card-icon"></i>
-                        <h3 class="card-title">Adaptação Sensorial</h3>
-                        <p class="card-text">Ajustes de som, luz e movimento para criar um ambiente confortável e acolhedor.</p>
-                    </div>
-                    <div class="card"><i class="fas fa-clock card-icon"></i>
-                        <h3 class="card-title">Ritmo Personalizado</h3>
-                        <p class="card-text">Atividades adaptadas ao tempo e necessidades individuais de cada criança.</p>
-                    </div>
-                    <div class="card"><i class="fas fa-hands-helping card-icon"></i>
-                        <h3 class="card-title">Comunicação Alternativa</h3>
-                        <p class="card-text">Múltiplas formas de comunicação, incluindo gestos, símbolos e tecnologia assistiva.</p>
-                    </div>
-                </div>
+    <!-- Crianças Atípicas -->
+    <section class="section fade-in-up atipicas-section">
+        <div class="atipicas-icons">
+            <i class="fas fa-puzzle-piece puzzle-autismo"></i>
+            <i class="fas fa-heart heart-autismo"></i>
+            <i class="fas fa-smile smile-autismo"></i>
+            <i class="fas fa-balloon balloon-autismo"></i>
+        </div>
+        <h2 class="section-title atipicas-title">Projeto Especial: Crianças Atípicas</h2>
+        <p class="section-subtitle" style="color: #3568e6;">
+            Doug foi especialmente programado para trabalhar com crianças autistas e atípicas, oferecendo uma abordagem personalizada e sensível às suas necessidades específicas.
+        </p>
+        <div class="cards-grid" style="margin-top: 1rem;">
+            <div class="card">
+                <i class="fas fa-puzzle-piece puzzle-autismo card-icon"></i>
+                <h3 class="card-title" style="color: #3568e6;">Adaptação Sensorial</h3>
+                <p class="card-text">Ajustes de som, luz e movimento para criar um ambiente confortável e acolhedor.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-clock heart-autismo card-icon"></i>
+                <h3 class="card-title" style="color: #FF6363;">Ritmo Personalizado</h3>
+                <p class="card-text">Atividades adaptadas ao tempo e necessidades individuais de cada criança.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-hands-helping smile-autismo card-icon"></i>
+                <h3 class="card-title" style="color: #FFD84B;">Comunicação Alternativa</h3>
+                <p class="card-text">Múltiplas formas de comunicação, incluindo gestos, símbolos e tecnologia assistiva.</p>
             </div>
         </div>
     </section>
-
     <!-- Contato -->
     <section id="contato" class="section fade-in-up">
         <div class="contact-section">
@@ -599,7 +646,7 @@
                         </a>
                     </div>
                     <div style="text-align: center;">
-                        <i class="fas fa-rocket" style="font-size: 8rem; opacity: 0.3; margin-bottom: 1.2rem;"></i>
+                        <img src="doug_logo.png" alt="Mini Doug" class="mini-doug"/>
                         <h3 style="font-family: 'Orbitron', monospace; font-size: 1.25rem; margin-bottom: 0.6rem;">
                             Demonstração Gratuita
                         </h3>
@@ -617,7 +664,6 @@
             </div>
         </div>
     </section>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
@@ -627,10 +673,11 @@
             </p>
         </div>
     </footer>
-
-    <!-- JS: Scroll suave, fade-in, partículas -->
+    <!-- Scripts: Slick, Particles.js, Fade-in, etc -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
-        // Particles.js config (tech/circuit effect)
+        // Particles.js config
         particlesJS("particles-js", {
             "particles": {
                 "number": { "value": 68, "density": { "enable": true, "value_area": 950 }},
@@ -647,27 +694,29 @@
             },
             "retina_detect": true
         });
-
-        // Scroll suave para links internos
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({behavior: 'smooth', block: 'start'});
-                }
+        // Workshops Slider
+        $(document).ready(function(){
+            $('.workshops-carousel').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 3200,
+                arrows: true,
+                dots: false,
+                variableWidth: false,
+                responsive: [
+                    { breakpoint: 1100, settings: { slidesToShow: 2 }},
+                    { breakpoint: 650, settings: { slidesToShow: 1 }}
+                ]
             });
         });
-
-        // Fade-in em elementos ao aparecer
+        // Fade-in
         const observerOptions = { threshold: 0.09, rootMargin: '0px 0px -50px 0px'};
         const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('fade-in-up');
-            });
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('fade-in-up'); });
         }, observerOptions);
         document.querySelectorAll('.section').forEach(el => { observer.observe(el); });
-
         // Header efeito scrolldown
         window.addEventListener('scroll', function() {
             const header = document.querySelector('.header');
