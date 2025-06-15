@@ -564,7 +564,7 @@
     <header class="header">
         <nav class="nav-container">
             <a href="#" class="logo">
-                <i class="fas fa-robot"></i>
+                <img src="doug_logo.png" alt="Universo Doug" style="height: 40px;">
                 Universo Doug
             </a>
             <ul class="nav-menu">
@@ -642,12 +642,11 @@
         <div class="doug-section">
             <div class="doug-content">
                 <div class="doug-image">
-                    <div class="doug-placeholder">
-                        <i class="fas fa-robot"></i>
-                    </div>
+                    <img src"doug_photo"> - O Humanoide Educador
+                        <style="width: 100%; max-width: 400px; border-radius: 20px;">
                     <p style="text-align: center; margin-top: 1rem; color: var(--prata-escura);">
                         Doug - O Humanoide Educador<br>
-                        <small>Foto real do Doug será inserida aqui</small>
+                        <small>doug_photo.png</small>
                     </p>
                 </div>
                 
@@ -828,7 +827,7 @@
                             <i class="fas fa-phone contact-icon"></i>
                             <div>
                                 <strong>Telefone/WhatsApp</strong>
-                                <p>(67) 99283-7970</p>
+                                <p>(67) 99238-0101</p>
                             </div>
                         </div>
                         
@@ -840,7 +839,7 @@
                             </div>
                         </div>
                         
-                        <a href="https://wa.me/5567992837970?text=Olá! Gostaria de saber mais sobre o Projeto Universo Doug e agendar uma demonstração." class="whatsapp-button">
+                        <a href="https://wa.me/5567992380101?text=Olá! Gostaria de saber mais sobre o Projeto Universo Doug e agendar uma demonstração." class="whatsapp-button">
                             <i class="fab fa-whatsapp"></i>
                             Falar no WhatsApp
                         </a>
