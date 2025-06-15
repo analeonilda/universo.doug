@@ -343,7 +343,7 @@
             text-align: center;
         }
 
-        .doug-placeholder {
+        .doug_photo.png {
             width: 100%;
             max-width: 400px;
             height: 500px;
