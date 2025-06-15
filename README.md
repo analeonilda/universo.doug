@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -641,12 +641,9 @@
     <section id="doug" class="section">
         <div class="doug-section">
             <div class="doug-content">
-                <div class="doug-image">
-                    <img src"doug_photo"> - O Humanoide Educador
-                        <style="width: 100%; max-width: 400px; border-radius: 20px;">
+                <div class="doug_photo">                    
                     <p style="text-align: center; margin-top: 1rem; color: var(--prata-escura);">
                         Doug - O Humanoide Educador<br>
-                        <small>doug_photo.png</small>
                     </p>
                 </div>
                 
