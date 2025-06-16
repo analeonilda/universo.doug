@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universo Doug - O Primeiro Humanoide Educador do Brasil</title>
+    <meta name="description" content="Conheça Doug, o primeiro humanoide educador do Brasil. Instituto Somar apresenta tecnologia revolucionária para transformar a educação com 20 workshops inovadores.">
+    
+    <!-- Fontes Modernas e Harmoniosas -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Swiper CSS para carrossel moderno -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    
+    <style>
+        :root {
+            --azul-primario: #0F172A;
+            --azul-secundario: #1E293B;
+            --azul-destaque: #3B82F6;
+            --azul-leve: #EFF6FF;
+            --azul-card: #1D4ED8;
+            --prata-primaria: #F1F5F9;
+            --prata-escura: #64748B;
+            --prata-metalica: #FAFAFA;
+            --branco: #FFFFFF;
+            --preto: #000000;
+            --gradiente-principal: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradiente-secundario: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --sombra-suave: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --sombra-media: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --sombra-forte: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            color: var(--azul-primario);
+            background: var(--prata-metalica);
+            overflow-x: hidden;
+            font-weight: 400;
+        }
+
+        html { 
+            scroll-behavior: smooth;
+        }
+
+        /* HEADER FUTURISTA */
+        .header {
+            position: fixed;
+            top: 0; 
+            left: 0; 
+            width: 100%;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--azul-destaque);
+            letter-spacing: -0.025em;
+            display: flex; 
+            align-items: center; 
+            gap: 0.75rem;
+        }
+
+        .logo img {
+            height: 40px; 
+            width: auto;
+        }
+
+        .nav-menu {
+            display: flex; 
+            list-style: none; 
+            gap: 2rem; 
+            align-items: center;
+        }
+
+        .nav-link {
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.8);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--azul-destaque);
+            background: rgba(59, 130, 246, 0.1);
+        }
+
+        .cta-button {
+            background: var(--gradiente-principal);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: var(--sombra-suave);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--sombra-media);
+        }
+
+        .spacer { 
+            height: 80px; 
+        }
+
+        /* HERO SECTION FUTURISTA */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: var(--gradiente-principal);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 4rem 2rem;
+            position: relative; 
+            z-index: 3;
+        }
+
+        .hero-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: white;
+            letter-spacing: -0.025em;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            font-weight: 400;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-story {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 300;
+            margin-bottom: 3rem;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .hero-buttons { 
+            display: flex; 
+            gap: 1.5rem; 
+            justify-content: center; 
+            flex-wrap: wrap; 
+            margin-top: 2rem;
+        }
+
+        .btn-primary, .btn-secondary {
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--azul-primario);
+            box-shadow: var(--sombra-suave);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--sombra-media);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: white;
+        }
+
+        /* SEÇÕES MODERNAS */
+        .section {
+            padding: 5rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--azul-primario);
+            letter-spacing: -0.025em;
+        }
+
+        .section-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--prata-escura);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* CARROSSEL DE WORKSHOPS MODERNO */
+        .workshops-section {
+            background: var(--azul-leve);
+            border-radius: 24px;
+            padding: 4rem 2rem;
+            margin: 3rem 0;
+        }
+
+        .swiper {
+            width: 100%;
+            padding: 2rem 0;
+        }
+
+        .swiper-slide {
+            height: auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .workshop-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: var(--sombra-suave);
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            width: 100%;
+            max-width: 320px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .workshop-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradiente-principal);
+        }
+
+        .workshop-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--sombra-media);
+        }
+
+        .workshop-icon {
+            font-size: 2.5rem;
+            color: var(--azul-destaque);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .workshop-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            color: var(--azul-primario);
+            margin-bottom: 0.75rem;
+            font-size: 1.2rem;
+        }
+
+        .workshop-description {
+            color: var(--prata-escura);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* NAVEGAÇÃO DO SWIPER */
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: var(--azul-destaque);
+            background: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: var(--sombra-suave);
+            transition: all 0.3s ease;
+        }
+
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
+            transform: scale(1.1);
+            box-shadow: var(--sombra-media);
+        }
+
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .swiper-pagination-bullet {
+            background: var(--azul-destaque);
+            opacity: 0.3;
+        }
+
+        .swiper-pagination-bullet-active {
+            opacity: 1;
+        }
+
+        /* DOUG SECTION FUTURISTA */
+        .doug-section {
+            background: white;
+            border-radius: 24px;
+            margin: 3rem 0;
+            overflow: hidden;
+            box-shadow: var(--sombra-suave);
+            border: 1px solid rgba(59, 130, 246, 0.1);
+        }
+
+        .doug-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            padding: 3rem;
+        }
+
+        .doug-image {
+            text-align: center;
+        }
+
+        .doug-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 16px;
+            box-shadow: var(--sombra-media);
+            transition: all 0.3s ease;
+        }
+
+        .doug-image img:hover {
+            transform: scale(1.05);
+            box-shadow: var(--sombra-forte);
+        }
+
+        .doug-features {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--azul-leve);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateX(8px);
+            box-shadow: var(--sombra-suave);
+        }
+
+        .feature-icon {
+            font-size: 1.5rem;
+            color: var(--azul-destaque);
+            min-width: 40px;
+            text-align: center;
+        }
+
+        .feature-text {
+            font-weight: 500;
+            color: var(--azul-primario);
+        }
+
+        /* SEÇÃO DE CRIANÇAS ATÍPICAS */
+        .atipicas-section {
+            background: var(--gradiente-secundario);
+            border-radius: 24px;
+            padding: 4rem 2rem;
+            margin: 3rem 0;
+            color: white;
+            text-align: center;
+        }
+
+        .atipicas-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: white;
+        }
+
+        .atipicas-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .atipicas-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .atipicas-card:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .atipicas-card .card-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .atipicas-card .card-text {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+        }
+
+        /* CONTATO SECTION */
+        .contact-section {
+            background: var(--azul-primario);
+            color: white;
+            border-radius: 24px;
+            margin: 3rem 0;
+            overflow: hidden;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            padding: 3rem;
+        }
+
+        .contact-info {
+            text-align: left;
+        }
+
+        .contact-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .contact-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-icon {
+            font-size: 1.3rem;
+            min-width: 40px;
+            text-align: center;
+        }
+
+        .whatsapp-button {
+            background: #25D366;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--sombra-suave);
+        }
+
+        .whatsapp-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--sombra-media);
+        }
+
+        /* FOOTER */
+        .footer {
+            background: var(--azul-primario);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        /* RESPONSIVIDADE */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .doug-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+        }
+
+        /* ANIMAÇÕES SUAVES */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* SCROLL INDICATOR */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 24px;
+            height: 40px;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 8px;
+        }
+
+        .scroll-indicator::before {
+            content: '';
+            width: 4px;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 2px;
+            animation: scroll 2s infinite;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(16px);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <img src="doug.jpeg" alt="Doug Logo">
+                <span>Universo Doug</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                <li><a href="#workshops" class="nav-link">Workshops</a></li>
+                <li><a href="#beneficios" class="nav-link">Benefícios</a></li>
+                <li><a href="#contato" class="nav-link">Contato</a></li>
+                <li><a href="#contato" class="cta-button">Entre em Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="spacer"></div>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content fade-in-up">
+            <h1 class="hero-title">O Primeiro Humanoide Educador do Brasil</h1>
+            <p class="hero-subtitle">Transformando a educação através da tecnologia e inovação</p>
+            <p class="hero-story">
+                Imagine um mundo onde a educação é inspiradora e acessível a todos. Conheça Doug, o humanoide educador transformando escolas em todo o Brasil. Ele é mais que um robô; é um companheiro de aprendizado que traz inovação com tecnologia de ponta.
+            </p>
+            <div class="hero-buttons">
+                <a href="#workshops" class="btn-primary">
+                    <i class="fas fa-play"></i>
+                    Conheça os Workshops
+                </a>
+                <a href="#contato" class="btn-secondary">
+                    <i class="fas fa-phone"></i>
+                    Solicitar Demonstração
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator"></div>
+    </section>
+
+    <!-- SOBRE O DOUG -->
+    <section id="sobre" class="section">
+        <div class="doug-section">
+            <div class="doug-content">
+                <div class="doug-image">
+                    <img src="doug.jpeg" alt="Doug - Humanoide Educador">
+                </div>
+                <div class="doug-features">
+                    <h2 class="section-title">O que torna Doug único?</h2>
+                    <p class="section-subtitle">
+                        Suas interações lúdicas despertam a curiosidade dos alunos, criando um ambiente envolvente que transforma o aprendizado em uma experiência inesquecível.
+                    </p>
+                    <div class="feature">
+                        <i class="fas fa-brain feature-icon"></i>
+                        <span class="feature-text">Inteligência artificial personaliza o aprendizado, ajustando-se ao ritmo de cada criança</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-comments feature-icon"></i>
+                        <span class="feature-text">Comunicação natural que facilita interações envolventes</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-gamepad feature-icon"></i>
+                        <span class="feature-text">Aprendizado lúdico através de workshops com jogos e atividades interativas</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-heart feature-icon"></i>
+                        <span class="feature-text">Abordagem inclusiva para crianças típicas e atípicas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WORKSHOPS CARROSSEL -->
+    <section id="workshops" class="section">
+        <div class="workshops-section">
+            <h2 class="section-title">20 Temas Essenciais para Formação Integral</h2>
+            <p class="section-subtitle">
+                Os temas dos workshops do Universo Doug foram cuidadosamente escolhidos para promover o desenvolvimento integral das crianças e adolescentes. Ao abordar questões essenciais como educação financeira, saúde, respeito, cidadania, tecnologia, sustentabilidade e habilidades socioemocionais, o projeto prepara os alunos para enfrentar os desafios do mundo atual e do futuro.
+            </p>
+            
+            <!-- Swiper -->
+            <div class="swiper workshopsSwiper">
+                <div class="swiper-wrapper">
+                    <!-- Desenvolvimento Socioemocional -->
+                    <div class="swiper-slide">
+                        <div class="workshop-card">
+                            <i class="fas fa-heart workshop-icon"></i>
+                            <h3 class="workshop-title">Habilidades Socioemocionais</h3>
+                            <p class="workshop-description">Desenvolvimento da inteligência emocional, autoconhecimento e regulação emocional para uma vida equilibrada.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="workshop-card">
+                            <i class="fas fa-shield-alt workshop-icon"></i>
+                            <h3 class="workshop-title">Anti-Bullying e Amizade</h3>
+                            <p class="workshop-description">Prevenção ao bullying, construção de relacionamentos saudáveis e promoção da empatia entre os alunos.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="workshop-card">
+                            <i class="fas fa-star workshop-icon"></i>
+                            <h3 class="workshop-title">Autoestima e Autoconfiança</h3>
+                            <p class="workshop-description">Fortalecimento da autoestima e desenvolvimento da confiança para enfrentar desafios com segurança.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="workshop-card">
+                            <i class="fas fa-brain workshop-icon"></i>
+                            <h3 class="workshop-title">Gestão de Emoções</h3>
+                            <p class="workshop-description">Técnicas para identificar, compreender e gerenciar emoções de forma saudável e construtiva.</p>
+                        </div>
+                    </div>
+
+                    <!-- Cidadania e Ética -->
+                    <div class="swiper-slide">
+                        <div class="workshop-card">
+                            <i class="fas fa-laptop workshop-icon"></i>
+                            <h3 class="workshop-title">Cidadania Digital</h3>
+                            <p class="workshop-description">Uso responsável da tecnologia, segurança online e ética no mundo digital.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="workshop-card">
+                            <i class="fas fa-gavel workshop-icon"></i>
+                            <h3 class="workshop-title">Regras Sociais</h3>
+                            <p class="workshop-description">Compreensão das normas sociais, direitos e deveres para uma convivência harmoniosa.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="workshop-card">
+                            <i class="fas fa-handshake workshop-icon"></i>
+                            <h3 class="workshop-title">Respeito e Igualdade</h3>
+                            <p class="workshop-description">Valorização da diversidade, promoção do respeito mútuo e combate à discriminação.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="workshop-card">
+                            <i class="fas fa-balance-scale workshop-icon"></i>
+                            <h3 class="workshop-title">Ética e Valores</h3>
+                            <p class="workshop-description">Formação de valores morais e éticos para tomada de decisões conscientes e responsáveis.</p>
+                        </div>
+                    </div>
+
+                    <!-- Sustentabilidade -->
+                    <div class="swiper-slide">
+                        <div class="workshop-card">
+                            <i class="fas fa-leaf workshop-icon"></i>
+                            <h3 class="workshop-title">Educação Ambiental</h3>
+                            <p class="workshop-description">Conscientização sobre questões ambientais e desenvolvimento de práticas sustentáveis.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="workshop-card">
+                            <i class="fas fa-recycle workshop-icon"></i>
+                            <h3 class="workshop-title">Reciclagem e Reutilização</h3>
+                            <p class="workshop-description">Práticas de reciclagem, reutilização de materiais e redução do desperdício.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="workshop-card">
+                            <i class="fas fa-shopping-cart workshop-icon"></i>
+                            <h3 class="workshop-title">Consumo Consciente</h3>
+                            <p class="workshop-description">Educação para o consumo responsável e sustentável, valorizando qualidade sobre quantidade.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="workshop-card">
+                            <i class="fas fa-tree workshop-icon"></i>
+                            <h3 class="workshop-title">Preservação da Natureza</h3>
+                            <p class="workshop-description">Importância da conservação ambiental e proteção dos ecossistemas naturais.</p>
+                        </div>
+                    </div>
+
+                    <!-- Saúde e Bem-estar -->
+                    <div class="swiper-slide">
+                        <div class="workshop-card">
+                            <i class="fas fa-apple-alt workshop-icon"></i>
+                            <h3 class="workshop-title">Nutrição e Hábitos Saudáveis</h3>
+                            <p class="workshop-description">Educação nutricional e desenvolvimento de hábitos alimentares saudáveis.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="workshop-card">
+                            <i class="fas fa-heartbeat workshop-icon"></i>
+                            <h3 class="workshop-title">Saúde e Prevenção</h3>
+                            <p class="workshop-description">Cuidados com a saúde, prevenção de doenças e importância dos check-ups regulares.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="workshop-card">
+                            <i class="fas fa-running workshop-icon"></i>
+                            <h3 class="workshop-title">Atividade Física</h3>
+                            <p class="workshop-description">Importância do exercício físico para o desenvolvimento corporal e mental.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="workshop-card">
+                            <i class="fas fa-hands-wash workshop-icon"></i>
+                            <h3 class="workshop-title">Higiene e Autocuidado</h3>
+                            <p class="workshop-description">Práticas de higiene pessoal e autocuidado para manutenção da saúde.</p>
+                        </div>
+                    </div>
+
+                    <!-- Educação Financeira -->
+                    <div class="swiper-slide">
+                        <div class="workshop-card">
+                            <i class="fas fa-coins workshop-icon"></i>
+                            <h3 class="workshop-title">Conceitos Básicos de Dinheiro</h3>
+                            <p class="workshop-description">Introdução aos conceitos fundamentais sobre dinheiro, valor e trocas comerciais.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="workshop-card">
+                            <i class="fas fa-piggy-bank workshop-icon"></i>
+                            <h3 class="workshop-title">Poupança e Planejamento</h3>
+                            <p class="workshop-description">Importância da poupança e planejamento financeiro para alcançar objetivos.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="workshop-card">
+                            <i class="fas fa-chart-line workshop-icon"></i>
+                            <h3 class="workshop-title">Consumo Responsável</h3>
+                            <p class="workshop-description">Educação para escolhas financeiras conscientes e consumo inteligente.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="workshop-card">
+                            <i class="fas fa-lightbulb workshop-icon"></i>
+                            <h3 class="workshop-title">Empreendedorismo Infantil</h3>
+                            <p class="workshop-description">Desenvolvimento do espírito empreendedor e criatividade para gerar valor.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CRIANÇAS ATÍPICAS -->
+    <section class="section">
+        <div class="atipicas-section">
+            <h2 class="atipicas-title">Educação Inclusiva para Crianças Atípicas</h2>
+            <p class="section-subtitle" style="color: rgba(255, 255, 255, 0.9);">
+                Mais do que transmitir conhecimento, os workshops incentivam valores, autonomia, empatia e responsabilidade, ajudando cada jovem a se tornar um cidadão consciente, saudável e preparado para viver em sociedade.
+            </p>
+            <div class="atipicas-cards">
+                <div class="atipicas-card">
+                    <h3 class="card-title">Metodologia Especializada</h3>
+                    <p class="card-text">Abordagem adaptada para crianças com necessidades especiais, respeitando o ritmo e as características individuais de cada aluno.</p>
+                </div>
+                <div class="atipicas-card">
+                    <h3 class="card-title">Tecnologia Assistiva</h3>
+                    <p class="card-text">Doug utiliza recursos tecnológicos avançados para facilitar a comunicação e o aprendizado de crianças com diferentes necessidades.</p>
+                </div>
+                <div class="atipicas-card">
+                    <h3 class="card-title">Desenvolvimento Social</h3>
+                    <p class="card-text">Foco no desenvolvimento de habilidades sociais e de comunicação através de atividades lúdicas e interativas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IMPACTO E RESULTADOS -->
+    <section id="beneficios" class="section">
+        <h2 class="section-title">Impacto Incomparável</h2>
+        <p class="section-subtitle">
+            Assim, Doug vai além do ensino tradicional, trazendo uma proposta inovadora que une tecnologia, inclusão e formação para a vida. Seu impacto é incomparável comparado aos métodos tradicionais.
+        </p>
+        <div class="cards-grid">
+            <div class="card">
+                <i class="fas fa-chart-line card-icon"></i>
+                <h3>87% de Melhoria</h3>
+                <p>Melhoria em habilidades socioemocionais</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-users card-icon"></i>
+                <h3>92% dos Educadores</h3>
+                <p>Educadores relatam maior engajamento</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-peace card-icon"></i>
+                <h3>78% de Redução</h3>
+                <p>Redução em conflitos em sala de aula</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-smile card-icon"></i>
+                <h3>95% de Satisfação</h3>
+                <p>Satisfação entre pais e responsáveis</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="section">
+        <div class="contact-section">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2 class="contact-title">Vamos Conversar</h2>
+                    <p class="contact-subtitle">
+                        Não fique para trás! Participe da revolução na educação. Contate-nos agora. Vamos juntos tornar a educação uma experiência incrível!
+                    </p>
+                    <div class="contact-item">
+                        <i class="fas fa-phone contact-icon"></i>
+                        <span>(67) 99283-7970</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <span>contato@institutosomar.com.br</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <span>Campo Grande, MS - Brasil</span>
+                    </div>
+                    <a href="https://wa.me/5567992837970?text=Olá! Gostaria de saber mais sobre o Universo Doug e seus workshops educacionais." class="whatsapp-button">
+                        <i class="fab fa-whatsapp"></i>
+                        Entre em Contato via WhatsApp
+                    </a>
+                </div>
+                <div class="contact-form">
+                    <h3 style="margin-bottom: 2rem; font-family: 'Space Grotesk', sans-serif;">Solicite uma Demonstração</h3>
+                    <p style="margin-bottom: 2rem; opacity: 0.9;">
+                        Imagine crianças ativas e felizes, participando com entusiasmo no aprendizado. Doug transforma conceitos em experiências envolventes e acessíveis.
+                    </p>
+                    <a href="https://wa.me/5567992837970?text=Olá! Gostaria de solicitar uma demonstração do Universo Doug para minha instituição." class="btn-primary" style="background: white; color: var(--azul-primario); width: 100%; justify-content: center;">
+                        <i class="fas fa-calendar-alt"></i>
+                        Agendar Demonstração
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Instituto Somar - Tecnologia e Educação. Todos os direitos reservados.</p>
+            <p>Universo Doug - Transformando a educação através da inovação</p>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    
+    <script>
+        // Inicialização do Swiper
+        var swiper = new Swiper(".workshopsSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 30,
+                },
+            },
+        });
+
+        // Smooth scrolling para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animação de fade-in ao scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up');
+                }
+            });
+        }, observerOptions);
+
+        // Observar elementos para animação
+        document.querySelectorAll('.section, .workshop-card, .card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Header transparente ao scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(15, 23, 42, 0.98)';
+            } else {
+                header.style.background = 'rgba(15, 23, 42, 0.95)';
+            }
+        });
+    </script>
+</body>
+</html>
+
