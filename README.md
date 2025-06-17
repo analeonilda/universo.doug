@@ -64,7 +64,7 @@
                 </div>
                 <div class="feature">
                     <i class="fas fa-gamepad feature-icon"></i>
-                    <p class="feature-text">Aprendizado lúdico através de workshops com conteúdo, jogos e atividades interativas</p>
+                    <p class="feature-text">Aprendizado lúdico através de workshops com conteúdo, jogos e atividades interativas para alunos do Ensino Fundamental I e II</p>
                 </div>
                 <div class="feature">
                     <i class="fas fa-heart feature-icon"></i>
@@ -76,41 +76,39 @@
 
     <section id="workshops" class="section workshops-section">
         <h2 class="section-title">20 Temas Essenciais para Formação Integral</h2>
-        <section id="workshops" class="section workshops-section">
-        <h2 class="section-title">20 Temas Essenciais para Formação Integral</h2>
-        <p class="section-subtitle"> Os temas dos workshops do Universo Doug foram cuidadosamente escolhidos para promover o desenvolvimento integral das crianças e adolescentes. Ao abordar questões essenciais, o projeto prepara os alunos para enfrentar os desafios do mundo atual e do futuro.
+        <p class="section-subtitle"> Os temas dos workshops do Universo Doug foram cuidadosamente escolhidos para promover o desenvolvimento integral das crianças e adolescentes. Ao abordar questões essenciais o projeto prepara os alunos para enfrentar os desafios do mundo.
 </p>
-<p class="section-subtitle" style="margin-top: 1.3em;"> Mais do que transmitir conhecimento, os workshops incentivam valores, autonomia, empatia e responsabilidade, ajudando cada jovem a se tornar um cidadão consciente, saudável e preparado para viver em sociedade. Assim, Doug vai além do ensino tradicional, trazendo uma proposta inovadora que une tecnologia, inclusão e formação para a vida.
+<p class="section-subtitle" style="margin-top: 1.3em;"> Mais do que transmitir conhecimento, os workshops incentivam valores, autonomia, empatia e responsabilidade, ajudando cada jovem a se tornar um cidadão consciente, saudável e preparado para viver em sociedade. Além do ensino tradicional, Doug traz uma proposta inovadora que une educação, tecnologia, inclusão e formação para a vida.
 </p>
-        
+
         <div class="swiper">
             <div class="swiper-wrapper">
                 <!-- Desenvolvimento Socioemocional -->
                 <div class="swiper-slide">
                     <div class="workshop-card">
                         <i class="fas fa-hand-holding-heart workshop-icon"></i>
-                        <h3 class="workshop-title">Habilidades Socioemocionais</h3>
+                        <h3 class="workshop-title">1. Habilidades Socioemocionais</h3>
                         <p class="workshop-description">Desenvolvimento da inteligência emocional, autoconhecimento e regulação emocional para uma vida equilibrada.</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="workshop-card">
                         <i class="fas fa-shield-alt workshop-icon"></i>
-                        <h3 class="workshop-title">Anti-Bullying e Amizade</h3>
+                        <h3 class="workshop-title">2. Anti-Bullying e Amizade</h3>
                         <p class="workshop-description">Prevenção ao bullying, construção de relacionamentos saudáveis e promoção da empatia entre os alunos.</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="workshop-card">
                         <i class="fas fa-star workshop-icon"></i>
-                        <h3 class="workshop-title">Autoestima e Autoconfiança</h3>
+                        <h3 class="workshop-title">3. Autoestima e Autoconfiança</h3>
                         <p class="workshop-description">Fortalecimento da autoestima e desenvolvimento da confiança para enfrentar desafios com segurança.</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="workshop-card">
                         <i class="fas fa-brain workshop-icon"></i>
-                        <h3 class="workshop-title">Gestão de Emoções</h3>
+                        <h3 class="workshop-title">4. Gestão de Emoções</h3>
                         <p class="workshop-description">Técnicas para identificar, compreender e gerenciar emoções de forma saudável e construtiva.</p>
                     </div>
                 </div>
@@ -119,28 +117,28 @@
                 <div class="swiper-slide">
                     <div class="workshop-card">
                         <i class="fas fa-globe workshop-icon"></i>
-                        <h3 class="workshop-title">Cidadania Digital</h3>
-                        <p class="workshop-description">Uso responsável da tecnologia, segurança online e ética no mundo digital.</p>
+                        <h3 class="workshop-title">5. Cidadania Digital</h3>
+                        <p class="workshop-description">Uso responsável da tecnologia, telas, segurança online e ética no mundo digital.</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="workshop-card">
                         <i class="fas fa-gavel workshop-icon"></i>
-                        <h3 class="workshop-title">Regras Sociais</h3>
+                        <h3 class="workshop-title">6. Regras Sociais</h3>
                         <p class="workshop-description">Compreensão das normas sociais, direitos e deveres para uma convivência harmoniosa.</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="workshop-card">
                         <i class="fas fa-users workshop-icon"></i>
-                        <h3 class="workshop-title">Respeito e Igualdade</h3>
+                        <h3 class="workshop-title">7. Respeito e Igualdade</h3>
                         <p class="workshop-description">Valorização da diversidade, promoção do respeito mútuo e combate à discriminação.</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="workshop-card">
                         <i class="fas fa-balance-scale workshop-icon"></i>
-                        <h3 class="workshop-title">Ética e Valores</h3>
+                        <h3 class="workshop-title">8. Ética e Valores</h3>
                         <p class="workshop-description">Formação de valores morais e éticos para tomada de decisões conscientes e responsáveis.</p>
                     </div>
                 </div>
@@ -149,28 +147,28 @@
                 <div class="swiper-slide">
                     <div class="workshop-card">
                         <i class="fas fa-leaf workshop-icon"></i>
-                        <h3 class="workshop-title">Educação Ambiental</h3>
+                        <h3 class="workshop-title">9. Educação Ambiental</h3>
                         <p class="workshop-description">Conscientização sobre questões ambientais e desenvolvimento de práticas sustentáveis.</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="workshop-card">
                         <i class="fas fa-recycle workshop-icon"></i>
-                        <h3 class="workshop-title">Reciclagem e Reutilização</h3>
+                        <h3 class="workshop-title">10. Reciclagem e Reutilização</h3>
                         <p class="workshop-description">Práticas de reciclagem, reutilização de materiais e redução do desperdício.</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="workshop-card">
                         <i class="fas fa-shopping-basket workshop-icon"></i>
-                        <h3 class="workshop-title">Consumo Consciente</h3>
+                        <h3 class="workshop-title">11. Consumo Consciente</h3>
                         <p class="workshop-description">Educação para o consumo responsável e sustentável, valorizando qualidade sobre quantidade.</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="workshop-card">
                         <i class="fas fa-tree workshop-icon"></i>
-                        <h3 class="workshop-title">Preservação da Natureza</h3>
+                        <h3 class="workshop-title">12. Preservação da Natureza</h3>
                         <p class="workshop-description">Importância da conservação ambiental e proteção dos ecossistemas naturais.</p>
                     </div>
                 </div>
@@ -179,28 +177,28 @@
                 <div class="swiper-slide">
                     <div class="workshop-card">
                         <i class="fas fa-apple-alt workshop-icon"></i>
-                        <h3 class="workshop-title">Nutrição e Hábitos Saudáveis</h3>
+                        <h3 class="workshop-title">13. Nutrição e Hábitos Saudáveis</h3>
                         <p class="workshop-description">Educação nutricional e desenvolvimento de hábitos alimentares saudáveis.</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="workshop-card">
                         <i class="fas fa-medkit workshop-icon"></i>
-                        <h3 class="workshop-title">Saúde e Prevenção</h3>
+                        <h3 class="workshop-title">14. Saúde e Prevenção</h3>
                         <p class="workshop-description">Cuidados com a saúde, prevenção de doenças e importância dos check-ups regulares.</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="workshop-card">
                         <i class="fas fa-running workshop-icon"></i>
-                        <h3 class="workshop-title">Atividade Física</h3>
+                        <h3 class="workshop-title">15. Atividade Física</h3>
                         <p class="workshop-description">Importância do exercício físico para o desenvolvimento corporal e mental.</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="workshop-card">
                         <i class="fas fa-soap workshop-icon"></i>
-                        <h3 class="workshop-title">Higiene e Autocuidado</h3>
+                        <h3 class="workshop-title">16. Higiene e Autocuidado</h3>
                         <p class="workshop-description">Práticas de higiene pessoal e autocuidado para manutenção da saúde.</p>
                     </div>
                 </div>
@@ -209,28 +207,28 @@
                 <div class="swiper-slide">
                     <div class="workshop-card">
                         <i class="fas fa-dollar-sign workshop-icon"></i>
-                        <h3 class="workshop-title">Conceitos Básicos de Dinheiro</h3>
+                        <h3 class="workshop-title">17. Conceitos Básicos de Dinheiro</h3>
                         <p class="workshop-description">Introdução aos conceitos fundamentais sobre dinheiro, valor e trocas comerciais.</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="workshop-card">
                         <i class="fas fa-piggy-bank workshop-icon"></i>
-                        <h3 class="workshop-title">Poupança e Planejamento</h3>
+                        <h3 class="workshop-title">18. Poupança e Planejamento</h3>
                         <p class="workshop-description">Importância da poupança e planejamento financeiro para alcançar objetivos.</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="workshop-card">
                         <i class="fas fa-lightbulb workshop-icon"></i>
-                        <h3 class="workshop-title">Consumo Responsável</h3>
+                        <h3 class="workshop-title">19. Consumo Responsável</h3>
                         <p class="workshop-description">Educação para escolhas financeiras conscientes e consumo inteligente.</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="workshop-card">
                         <i class="fas fa-chart-line workshop-icon"></i>
-                        <h3 class="workshop-title">Empreendedorismo Infantil</h3>
+                        <h3 class="workshop-title">20. Empreendedorismo Infantil</h3>
                         <p class="workshop-description">Desenvolvimento do espírito empreendedor e criatividade para gerar valor.</p>
                     </div>
                 </div>
@@ -244,7 +242,7 @@
     </section>
 
     <section id="educacao-inclusiva" class="section atipicas-section">
-        <h2 class="atipicas-title">Educação Inclusiva para Crianças Atípicas</h2>
+        <h2 class="atipicas-title">Educação Inclusiva para Crianças Atípicas - Mais de 100 atividades baseadas em metodologias internacionais comprovadas</h2>
         <p class="section-subtitle">Mais do que transmitir conhecimento, os workshops incentivam valores, autonomia, empatia e responsabilidade, ajudando cada jovem a se tornar um cidadão consciente, saudável e preparado para viver em sociedade.</p>
         <div class="atipicas-cards">
             <div class="atipicas-card">
