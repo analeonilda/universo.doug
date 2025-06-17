@@ -76,7 +76,7 @@
 
     <section id="workshops" class="section workshops-section">
         <h2 class="section-title">20 Temas Essenciais para Formação Integral</h2>
-        <p class="section-subtitle">Os temas dos workshops do Universo Doug foram cuidadosamente escolhidos para promover o desenvolvimento integral das crianças e adolescentes. Ao abordar questões essenciais o projeto prepara os alunos para enfrentar os desafios do mundo atual e do futuro.</p>
+        <p class="section-subtitle">Os temas dos workshops do Universo Doug foram cuidadosamente escolhidos para promover o desenvolvimento integral das crianças e adolescentes. Ao abordar questões essenciais como educação financeira, saúde, respeito, cidadania, tecnologia, sustentabilidade e habilidades socioemocionais, o projeto prepara os alunos para enfrentar os desafios do mundo atual e do futuro.</p>
         
         <div class="swiper">
             <div class="swiper-wrapper">
@@ -267,9 +267,9 @@
                 <p class="contact-subtitle">Participe da revolução na educação. Contate-nos agora. Vamos juntos tornar a educação uma experiência incrível!</p>
                 <div class="contact-item">
                     <i class="fas fa-phone-alt contact-icon"></i>
-                    <p>(67) 99238-0101</p>
+                    <p>(67) 99283-7970</p>
                 </div>
-                <a href="https://wa.me/5567992380101?text=Olá! Tenho interesse no projeto Universo Doug e gostaria de mais informações." target="_blank" class="whatsapp-button">
+                <a href="https://wa.me/5567992837970?text=Olá! Tenho interesse no projeto Universo Doug e gostaria de mais informações." target="_blank" class="whatsapp-button">
                     <i class="fab fa-whatsapp"></i> Fale Conosco pelo WhatsApp
                 </a>
             </div>
