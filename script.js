@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (whatsappButton) {
         whatsappButton.addEventListener("click", function(e) {
             e.preventDefault();
-            const phoneNumber = "5567992837970"; // Seu número de telefone com código do país
+            const phoneNumber = "5567992380101"; // Seu número de telefone com código do país
             const message = "Olá! Tenho interesse no projeto Universo Doug e gostaria de mais informações.";
             const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
             window.open(whatsappUrl, "_blank");
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (ctaButton) {
         ctaButton.addEventListener("click", function(e) {
             e.preventDefault();
-            const phoneNumber = "5567992837970"; // Seu número de telefone com código do país
+            const phoneNumber = "5567992380101"; // Seu número de telefone com código do país
             const message = "Olá! Tenho interesse no projeto Universo Doug e gostaria de mais informações.";
             const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
             window.open(whatsappUrl, "_blank");
