@@ -88,28 +88,28 @@
                     <div class="workshop-card">
                         <i class="fas fa-hand-holding-heart workshop-icon"></i>
                         <h3 class="workshop-title">1. Habilidades Socioemocionais</h3>
-                        <p class="workshop-description">Desenvolvimento da inteligência emocional, autoconhecimento e regulação emocional para uma vida equilibrada.</p>
+                        <p class="workshop-description">Desenvolvimento da inteligência emocional, autoconhecimento e gestão de sentimentos. Ensina crianças a identificar, expressar e regular suas emoções de forma saudável.</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="workshop-card">
                         <i class="fas fa-shield-alt workshop-icon"></i>
                         <h3 class="workshop-title">2. Anti-Bullying e Amizade</h3>
-                        <p class="workshop-description">Prevenção ao bullying, construção de relacionamentos saudáveis e promoção da empatia entre os alunos.</p>
+                        <p class="workshop-description">Promove relações respeitosas e combate todas as formas de bullying. Fortalece vínculos de amizade verdadeira baseados no respeito mútuo e na empatia.</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="workshop-card">
                         <i class="fas fa-star workshop-icon"></i>
-                        <h3 class="workshop-title">3. Autoestima e Autoconfiança</h3>
-                        <p class="workshop-description">Fortalecimento da autoestima e desenvolvimento da confiança para enfrentar desafios com segurança.</p>
+                        <h3 class="workshop-title">3. Autocuidado e Respeito</h3>
+                        <p class="workshop-description">Ensina a importância do cuidado pessoal e do respeito próprio e aos outros. Desenvolve autonomia para decisões saudáveis e relacionamentos equilibrados.</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="workshop-card">
                         <i class="fas fa-brain workshop-icon"></i>
-                        <h3 class="workshop-title">4. Gestão de Emoções</h3>
-                        <p class="workshop-description">Técnicas para identificar, compreender e gerenciar emoções de forma saudável e construtiva.</p>
+                        <h3 class="workshop-title">4. Diversidade e Inclusão</h3>
+                        <p class="workshop-description">Celebra as diferenças e promove a inclusão de todas as pessoas. Combate preconceitos e desenvolve uma mentalidade aberta e acolhedora.</p>
                     </div>
                 </div>
 
@@ -117,15 +117,15 @@
                 <div class="swiper-slide">
                     <div class="workshop-card">
                         <i class="fas fa-globe workshop-icon"></i>
-                        <h3 class="workshop-title">5. Cidadania Digital</h3>
-                        <p class="workshop-description">Uso responsável da tecnologia, telas, segurança online e ética no mundo digital.</p>
+                        <h3 class="workshop-title">5. Regras Sociais</h3>
+                        <p class="workshop-description">Explica a importância das normas de convivência em sociedade. Desenvolve consciência sobre direitos, deveres e responsabilidades sociais.</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="workshop-card">
                         <i class="fas fa-gavel workshop-icon"></i>
-                        <h3 class="workshop-title">6. Regras Sociais</h3>
-                        <p class="workshop-description">Compreensão das normas sociais, direitos e deveres para uma convivência harmoniosa.</p>
+                        <h3 class="workshop-title">6. Respeito e Igualdade</h3>
+                        <p class="workshop-description">Promove valores de respeito mútuo e igualdade entre todas as pessoas. Combate discriminação e fortalece a cultura de direitos humanos.</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -138,8 +138,8 @@
                 <div class="swiper-slide">
                     <div class="workshop-card">
                         <i class="fas fa-balance-scale workshop-icon"></i>
-                        <h3 class="workshop-title">8. Ética e Valores</h3>
-                        <p class="workshop-description">Formação de valores morais e éticos para tomada de decisões conscientes e responsáveis.</p>
+                        <h3 class="workshop-title">8. Cultura da Paz e Prevenção de Conflitos</h3>
+                        <p class="workshop-description">Ensina estratégias pacíficas para resolver conflitos e promover harmonia. Desenvolve habilidades de mediação, diálogo e construção de consensos.</p>
                     </div>
                 </div>
 
@@ -148,28 +148,28 @@
                     <div class="workshop-card">
                         <i class="fas fa-leaf workshop-icon"></i>
                         <h3 class="workshop-title">9. Educação Ambiental</h3>
-                        <p class="workshop-description">Conscientização sobre questões ambientais e desenvolvimento de práticas sustentáveis.</p>
+                        <p class="workshop-description">Desenvolve consciência ecológica e responsabilidade ambiental. Ensina práticas sustentáveis para preservação do meio ambiente e do planeta.</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="workshop-card">
                         <i class="fas fa-recycle workshop-icon"></i>
-                        <h3 class="workshop-title">10. Reciclagem e Reutilização</h3>
-                        <p class="workshop-description">Práticas de reciclagem, reutilização de materiais e redução do desperdício.</p>
+                        <h3 class="workshop-title">10. Educação Sexual</h3>
+                        <p class="workshop-description">Aborda sexualidade de forma educativa, respeitosa e adequada à idade. Promove autoconhecimento, respeito ao corpo e relações saudáveis.</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="workshop-card">
                         <i class="fas fa-shopping-basket workshop-icon"></i>
-                        <h3 class="workshop-title">11. Consumo Consciente</h3>
-                        <p class="workshop-description">Educação para o consumo responsável e sustentável, valorizando qualidade sobre quantidade.</p>
+                        <h3 class="workshop-title">11. Prevenção às Drogas</h3>
+                        <p class="workshop-description">Informa sobre riscos das drogas e fortalece fatores de proteção. Desenvolve habilidades para tomar decisões conscientes e resistir a pressões.</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="workshop-card">
                         <i class="fas fa-tree workshop-icon"></i>
-                        <h3 class="workshop-title">12. Preservação da Natureza</h3>
-                        <p class="workshop-description">Importância da conservação ambiental e proteção dos ecossistemas naturais.</p>
+                        <h3 class="workshop-title">12. Prevenção de Dengue e Controle de Pragas</h3>
+                        <p class="workshop-description">Ensina medidas preventivas contra dengue e outras doenças transmitidas por vetores. Promove hábitos de higiene e cuidados com o ambiente doméstico.</p>
                     </div>
                 </div>
 
@@ -178,28 +178,28 @@
                     <div class="workshop-card">
                         <i class="fas fa-apple-alt workshop-icon"></i>
                         <h3 class="workshop-title">13. Nutrição e Hábitos Saudáveis</h3>
-                        <p class="workshop-description">Educação nutricional e desenvolvimento de hábitos alimentares saudáveis.</p>
+                        <p class="workshop-description">Promove alimentação equilibrada e estilo de vida saudável. Ensina a importância dos nutrientes e desenvolve consciência alimentar.</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="workshop-card">
                         <i class="fas fa-medkit workshop-icon"></i>
-                        <h3 class="workshop-title">14. Saúde e Prevenção</h3>
-                        <p class="workshop-description">Cuidados com a saúde, prevenção de doenças e importância dos check-ups regulares.</p>
+                        <h3 class="workshop-title">14. Saúde e Prevenção de Doenças</h3>
+                        <p class="workshop-description">Desenvolve conhecimentos sobre cuidados básicos de saúde e prevenção. Promove hábitos de higiene e autocuidado para manter o bem-estar.</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="workshop-card">
                         <i class="fas fa-running workshop-icon"></i>
-                        <h3 class="workshop-title">15. Atividade Física</h3>
-                        <p class="workshop-description">Importância do exercício físico para o desenvolvimento corporal e mental.</p>
+                        <h3 class="workshop-title">15. Educação de Trânsito</h3>
+                        <p class="workshop-description">Ensina regras de trânsito e comportamentos seguros como pedestre e passageiro. Desenvolve consciência sobre segurança viária e responsabilidade no trânsito.</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="workshop-card">
                         <i class="fas fa-soap workshop-icon"></i>
-                        <h3 class="workshop-title">16. Higiene e Autocuidado</h3>
-                        <p class="workshop-description">Práticas de higiene pessoal e autocuidado para manutenção da saúde.</p>
+                        <h3 class="workshop-title">16.  Doação de Órgãos</h3>
+                        <p class="workshop-description">Esclarece sobre a importância da doação de órgãos para salvar vidas. Promove solidariedade e consciência sobre este ato de amor ao próximo.</p>
                     </div>
                 </div>
 
@@ -207,29 +207,29 @@
                 <div class="swiper-slide">
                     <div class="workshop-card">
                         <i class="fas fa-dollar-sign workshop-icon"></i>
-                        <h3 class="workshop-title">17. Conceitos Básicos de Dinheiro</h3>
-                        <p class="workshop-description">Introdução aos conceitos fundamentais sobre dinheiro, valor e trocas comerciais.</p>
+                        <h3 class="workshop-title">17. Pequenos Cientistas</h3>
+                        <p class="workshop-description">Desperta curiosidade científica através de experimentos e descobertas. Desenvolve pensamento crítico e metodologia científica de forma lúdica.</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="workshop-card">
                         <i class="fas fa-piggy-bank workshop-icon"></i>
-                        <h3 class="workshop-title">18. Poupança e Planejamento</h3>
-                        <p class="workshop-description">Importância da poupança e planejamento financeiro para alcançar objetivos.</p>
+                        <h3 class="workshop-title">18. Pensamento Computacional</h3>
+                        <p class="workshop-description">Introduz conceitos de lógica, algoritmos e resolução de problemas. Desenvolve raciocínio estruturado e habilidades fundamentais para era digital.</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="workshop-card">
                         <i class="fas fa-lightbulb workshop-icon"></i>
-                        <h3 class="workshop-title">19. Consumo Responsável</h3>
-                        <p class="workshop-description">Educação para escolhas financeiras conscientes e consumo inteligente.</p>
+                        <h3 class="workshop-title">19. Cidadania Digital</h3>
+                        <p class="workshop-description">Ensina uso responsável e seguro da tecnologia e internet. Desenvolve competências digitais e consciência sobre direitos e deveres online.</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="workshop-card">
                         <i class="fas fa-chart-line workshop-icon"></i>
-                        <h3 class="workshop-title">20. Empreendedorismo Infantil</h3>
-                        <p class="workshop-description">Desenvolvimento do espírito empreendedor e criatividade para gerar valor.</p>
+                        <h3 class="workshop-title">20. Formação em finanças pessoais</h3>
+                        <p class="workshop-description">Introduz conceitos básicos de dinheiro, poupança e consumo consciente. Desenvolve habilidades para gestão financeira e planejamento futuro.</p>
                     </div>
                 </div>
             </div>
