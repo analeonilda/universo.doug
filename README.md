@@ -75,7 +75,7 @@
     </section>
 
     <section id="workshops" class="section workshops-section">
-        <h2 class="section-title">20 Temas Essenciais para Formação Integral</h2>
+        <h2 class="section-title">Temas Essenciais para Formação Integral</h2>
         <p class="section-subtitle"> Os temas dos workshops do Universo Doug foram cuidadosamente escolhidos para promover o desenvolvimento integral das crianças e adolescentes. Ao abordar questões essenciais o projeto prepara os alunos para enfrentar os desafios do mundo.
 </p>
 <p class="section-subtitle" style="margin-top: 1.3em;"> Mais do que transmitir conhecimento, os workshops incentivam valores, autonomia, empatia e responsabilidade, ajudando cada jovem a se tornar um cidadão consciente, saudável e preparado para viver em sociedade. Além do ensino tradicional, Doug traz uma proposta inovadora que une educação, tecnologia, inclusão e formação para a vida.
@@ -112,7 +112,6 @@
                         <p class="workshop-description">Celebra as diferenças e promove a inclusão de todas as pessoas. Combate preconceitos e desenvolve uma mentalidade aberta e acolhedora.</p>
                     </div>
                 </div>
-
                 <!-- Cidadania e Ética -->
                 <div class="swiper-slide">
                     <div class="workshop-card">
@@ -242,7 +241,7 @@
     </section>
 
     <section id="educacao-inclusiva" class="section atipicas-section">
-        <h2 class="atipicas-title">Educação Inclusiva para Crianças Atípicas - Mais de 100 atividades baseadas em metodologias internacionais comprovadas</h2>
+        <h2 class="atipicas-title">Educação Inclusiva para Crianças Atípicas - Atividades baseadas em metodologias internacionais comprovadas</h2>
         <p class="section-subtitle">Mais do que transmitir conhecimento, os workshops incentivam valores, autonomia, empatia e responsabilidade, ajudando cada jovem a se tornar um cidadão consciente, saudável e preparado para viver em sociedade.</p>
         <div class="atipicas-cards">
             <div class="atipicas-card">
